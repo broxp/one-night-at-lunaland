@@ -6,7 +6,7 @@ public class ItemPickup : MonoBehaviour {
 	public GameLogic game;
 	// Use this for initialization
 	void Start () {
-		
+		game = GameObject.FindGameObjectsWithTag("Logic")[0].GetComponent<GameLogic>();
 	}
 	
 	// Update is called once per frame
@@ -15,8 +15,8 @@ public class ItemPickup : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		print ("item picked up");
-		game.ammo++;
-		Destroy (this);
+		game.ammoCarriedByTeddy++;
+		Destroy (gameObject);
 	}
 
 }
