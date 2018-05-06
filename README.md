@@ -19,3 +19,12 @@
 | Eingesprochene Texte (Synchro) | Karo | TODO | |
 
 ![level](sample-level.jpg "Level")
+
+## Notizen
+
+Jeder Weg, der nach oben geht muss auch wieder ohne runterzufallen nach unten führen, sonst
+
+<pre>
+    /---------- v (runterfallen)
+___/   <-- da ist dann ne Wand           
+</pre>
