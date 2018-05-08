@@ -10,7 +10,7 @@
 | Gefahr anzeigen bei safety <= x | ? | TODO | Canvas-UI gesteuert über GameLogic.cs |
 | Gefahr abwehren durch quicktime (Space) | ? | TODO | UI + GameLogic.cs |
 | Was passiert bei Tod | ? | TODO | GameLogic.cs Methode dazu |
-| Bild drehen | Karsten | TODO | wow  - wird zeit. |
+| Bild drehen | Karsten | TODO | wow |
 | Bilder | Karo, Matthias | TODO | ^^ |
 | Animation | ? | TODO | wer kennt sich aus? |
 | Soundsystem in Unity | ? | TODO | |
