@@ -33,7 +33,7 @@ public class TeddyModell : MonoBehaviour {
     }
 
 
-    //Registriert, wenn Kreuzung, Pickup, oder Lunas Sicherheitsbereich betreten wurde
+    //Registriert, wenn Kreuzung, Pickup, Rampenvon der "falschen" Seite, oder Lunas Sicherheitsbereich betreten wurde
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "PickUp")
@@ -51,6 +51,11 @@ public class TeddyModell : MonoBehaviour {
         {
             print("crossing");
             CanvasView.instance.ShowCrossingBubble();
+        }
+
+        if(collision.gameObject.tag == "UpRamp")
+        {
+            GameLogic.instance.DeactivateUpWays();
         }
 
         if (collision.gameObject.tag == "Luna")
@@ -101,7 +106,7 @@ public class TeddyModell : MonoBehaviour {
     {
         print("picked up!");
         GameObject.Destroy(item);
-        GameLogic.instance.ammo++;
+        ammoCarriedByTeddy++;
         CanvasView.instance.ClearBubbles();
     }
 
@@ -115,8 +120,10 @@ public class TeddyModell : MonoBehaviour {
     //Aktionen wenn Teddy zurück in Lunas Sicherheit ist LUNA TRIGGER EINRICHTEN
     void BackToLuna()
     {
+        print("back!");
+
         //Munition übergeben
-        GameLogic.instance.ammo = ammoCarriedByTeddy;
+        GameLogic.instance.ammo += ammoCarriedByTeddy;
         ammoCarriedByTeddy = 0;
 
         //Timer auf Phase 2 resetten

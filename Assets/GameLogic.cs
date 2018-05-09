@@ -10,7 +10,7 @@ public class GameLogic : MonoBehaviour
 
 	public double ammo, monsterDmg, safety, maxSafety, safetyDelta, phaseTwoThreshold;
     private bool phaseTwoTriggered = false;
-	public List<GameObject> toggelable;
+	public GameObject[] toggelables;
 
 	public GameObject luna, teddy;
 	public float charactersOffset;
@@ -28,6 +28,12 @@ public class GameLogic : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    //Alle Rampen in die Liste aufnehmen
+    private void Start()
+    {
+        toggelables = GameObject.FindGameObjectsWithTag("UpRamp");
     }
 
     void Update ()
@@ -56,7 +62,7 @@ public class GameLogic : MonoBehaviour
     //Aktiviert alle Levelelemente die nach oben führen
     public void ActivateUpWays()
     {
-        foreach (var item in toggelable)
+        foreach (var item in toggelables)
         {
             foreach (var subItem in item.GetComponentsInChildren<Collider2D>())
             {
@@ -68,7 +74,7 @@ public class GameLogic : MonoBehaviour
     //Deaktiviert alle Levelelemente die nach oben führen
     public void DeactivateUpWays()
     {
-        foreach (var item in toggelable)
+        foreach (var item in toggelables)
         {
             foreach (var subItem in item.GetComponentsInChildren<Collider2D>())
             {
