@@ -8,6 +8,8 @@ TagManager:
   - PickUp
   - Crossing
   - Bubble
+  - UpRamp
+  - Luna
   layers:
   - Default
   - TransparentFX

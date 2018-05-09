@@ -85,7 +85,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114227281862457232, guid: b059e01508ece06428e1942747c1f054,
+      - m_Target: {fileID: 114680152854360074, guid: b059e01508ece06428e1942747c1f054,
           type: 2}
         m_MethodName: LeaveItem
         m_Mode: 1

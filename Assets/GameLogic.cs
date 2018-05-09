@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.UIElements;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameLogic : MonoBehaviour
 {
     public static GameLogic instance = null;
 
 	public double ammo, monsterDmg, safety, maxSafety, safetyDelta, phaseTwoThreshold;
-    private bool phaseTwoTriggered = false;
-	public GameObject[] toggelables;
-
+    public GameObject[] toggelables;
 	public GameObject luna, teddy;
 	public float charactersOffset;
+    public bool gamePaused;
+
+    private bool phaseTwoTriggered;
 
     //Initialisieren als Singleton
     void Awake()
@@ -34,6 +36,8 @@ public class GameLogic : MonoBehaviour
     private void Start()
     {
         toggelables = GameObject.FindGameObjectsWithTag("UpRamp");
+        phaseTwoTriggered = false;
+        gamePaused = false;
     }
 
     void Update ()
@@ -57,6 +61,11 @@ public class GameLogic : MonoBehaviour
         Vector3 lunaPos = luna.transform.position;
         lunaPos.x = teddy.transform.position.x + charactersOffset;
         luna.transform.position = lunaPos;
+    }
+
+    public void LoadLevel(int buildIndex = default(SceneManager.GetActiveScene().buildIndex))
+    {
+        SceneManager.LoadScene();
     }
 
     //Aktiviert alle Levelelemente die nach oben führen

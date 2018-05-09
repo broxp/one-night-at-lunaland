@@ -51,6 +51,7 @@ public class TeddyModell : MonoBehaviour {
         {
             print("crossing");
             CanvasView.instance.ShowCrossingBubble();
+            GameLogic.instance.gamePaused = true;
         }
 
         if(collision.gameObject.tag == "UpRamp")
@@ -67,7 +68,7 @@ public class TeddyModell : MonoBehaviour {
     //Löscht alle Sprechblasen beim verlassen interaktiver Zone und registriert verlassen von Lunas sicherer Zone
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Crossing" || collision.gameObject.tag == "PickUp")
+        if (collision.gameObject.tag == "PickUp")
         {
             CanvasView.instance.ClearBubbles();
         }
@@ -89,6 +90,7 @@ public class TeddyModell : MonoBehaviour {
     public void GoUp()
     {
         print("up!");
+        GameLogic.instance.gamePaused = false;
         GameLogic.instance.ActivateUpWays();
         CanvasView.instance.ClearBubbles();
     }
@@ -97,6 +99,7 @@ public class TeddyModell : MonoBehaviour {
     public void GoDown()
     {
         print("down!");
+        GameLogic.instance.gamePaused = false;
         GameLogic.instance.DeactivateUpWays();
         CanvasView.instance.ClearBubbles();
     }
