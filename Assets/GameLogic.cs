@@ -9,7 +9,7 @@ public class GameLogic : MonoBehaviour
 {
     public static GameLogic instance = null;
 
-	public double ammo, monsterDmg, safety, maxSafety, safetyDelta, phaseTwoThreshold;
+	public double ammo, monsterDmg, safety, maxSafety, safetyDelta, phaseTwoThreshold, phaseTwoRepelThreshold;
     public GameObject[] toggelables;
 	public GameObject luna, teddy;
 	public float charactersOffset;
@@ -63,9 +63,14 @@ public class GameLogic : MonoBehaviour
         luna.transform.position = lunaPos;
     }
 
-    public void LoadLevel(int buildIndex = default(SceneManager.GetActiveScene().buildIndex))
+    public void LoadLevel(int buildIndex = -1)
     {
-        SceneManager.LoadScene();
+        if(buildIndex < 0)
+        {
+            buildIndex = SceneManager.GetActiveScene().buildIndex;
+        }
+
+        SceneManager.LoadScene(buildIndex);
     }
 
     //Aktiviert alle Levelelemente die nach oben führen
@@ -92,6 +97,34 @@ public class GameLogic : MonoBehaviour
         }
     }
 
+    //Monster Abwehren
+    public void RepelMonster()
+    {
+        if (ammo > 0)
+        {
+            print("light!");
+            ammo--;
+            //SOUND LICHT
+
+            if (safety <= phaseTwoRepelThreshold)
+            {
+                safety = maxSafety;
+                //SOUND MONSTER SCHMERZVERZERRTES SCHREIEN
+            }
+            else
+            {
+                safety = phaseTwoThreshold;
+                //SOUND GENERVTES MONSTERGERÄUSCH
+            }
+                
+        }
+        else
+        {
+            //SOUND KEINE MATCHES
+            print("not enough matches");
+        }
+    }
+
     //CanvasView aktualisieren
     void UpdateCanvasView()
     {
@@ -103,10 +136,5 @@ public class GameLogic : MonoBehaviour
     void MonsterPhase2()
     {
         //SOUND WECHSELN
-    }
-
-    public void ResetToCheckpoint()
-    {
-        //LUNA STIRBT
     }
 }

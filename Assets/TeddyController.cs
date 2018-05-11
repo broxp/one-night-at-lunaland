@@ -26,6 +26,10 @@ public class TeddyController : MonoBehaviour {
         // Read the jump input in Update so button presses aren't missed.
         //    m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
         //}
+        if(CrossPlatformInputManager.GetButtonDown("Repel"))
+        {
+            teddyModell.ActivateLight();
+        }
     }
 
 
@@ -43,7 +47,7 @@ public class TeddyController : MonoBehaviour {
 
         // Pass all parameters to the character control script.
         m_Character.Move(h, crouch, m_Jump);
-        m_Jump = false;
+        //m_Jump = false;
     }
 }
 

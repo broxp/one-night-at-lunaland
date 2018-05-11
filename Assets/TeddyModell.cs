@@ -23,7 +23,7 @@ public class TeddyModell : MonoBehaviour {
         {
             if(safe || hp <= 0)
             {
-                GameLogic.instance.ResetToCheckpoint();
+                GameLogic.instance.LoadLevel();
             }
             else
             {
@@ -135,5 +135,11 @@ public class TeddyModell : MonoBehaviour {
         //Sicherer Status für Teddy
         safe = true;
 
+    }
+
+    //Monster abwehren
+    public void ActivateLight()
+    {
+        GameLogic.instance.RepelMonster();
     }
 }

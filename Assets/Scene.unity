@@ -905,7 +905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1450,10 +1450,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammo: 0
   monsterDmg: 1
-  safety: 3
-  maxSafety: 3
+  safety: 40
+  maxSafety: 40
   safetyDelta: -1
-  phaseTwoThreshold: 5
+  phaseTwoThreshold: 6
+  phaseTwoRepelThreshold: 2
   toggelables: []
   luna: {fileID: 165897470}
   teddy: {fileID: 1188996103}
