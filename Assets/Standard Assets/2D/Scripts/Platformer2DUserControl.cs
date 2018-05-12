@@ -20,11 +20,11 @@ namespace UnityStandardAssets._2D
 
         private void Update()
         {
-            //if (!m_Jump)
-            //{
+            if (!m_Jump)
+            {
                 // Read the jump input in Update so button presses aren't missed.
-            //    m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
-            //}
+                m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
+            }
         }
 
 
