@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 61829112194665852}
   - component: {fileID: 61471604588590264}
   m_Layer: 0
-  m_Name: UpRampDioganal
+  m_Name: UpRampDiogonal
   m_TagString: UpRamp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
