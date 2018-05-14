@@ -2248,6 +2248,9 @@ Transform:
   m_PrefabInternal: {fileID: 358123566}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6bbb6bf544acf45f1fef3fe39d032c51185eb266
 --- !u!1 &1455954313 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1421972222995136, guid: 2c1f776145df8244b8b1851dbbee7f73,
@@ -2314,10 +2317,13 @@ Prefab:
   m_ParentPrefab: {fileID: 100100000, guid: 2c1f776145df8244b8b1851dbbee7f73, type: 2}
   m_IsPrefabParent: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 688e09fe08b595bc1b4990201ad94f0647264b83
 =======
 >>>>>>> parent of d7ce5b8... Level 3 und so
+=======
+>>>>>>> 6bbb6bf544acf45f1fef3fe39d032c51185eb266
 --- !u!1001 &1479870698
 Prefab:
   m_ObjectHideFlags: 0
