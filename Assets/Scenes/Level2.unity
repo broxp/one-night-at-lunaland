@@ -2246,6 +2246,23 @@ Transform:
   m_PrefabParentObject: {fileID: 4380512424604026, guid: 2c1f776145df8244b8b1851dbbee7f73,
     type: 2}
   m_PrefabInternal: {fileID: 358123566}
+--- !u!1 &1455954313 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1421972222995136, guid: 2c1f776145df8244b8b1851dbbee7f73,
+    type: 2}
+  m_PrefabInternal: {fileID: 1112456433}
+--- !u!114 &1455954316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1455954313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 827d1549d73b4314ca8d81b8d918be20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioEvent: Coin
 --- !u!1001 &1477324712
 Prefab:
   m_ObjectHideFlags: 0
@@ -2705,6 +2722,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1706281667}
   - component: {fileID: 1706281666}
+  - component: {fileID: 1706281668}
   m_Layer: 0
   m_Name: Logic
   m_TagString: Logic
@@ -2748,6 +2766,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1706281668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1706281665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f08d57169994ef941b484d5c43d13642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioEvents:
+  - triggerChance: 1
+    name: Coin
+    audioSources:
+    - {fileID: 8300000, guid: 23d4a9a072f655346aedef1322bd1a6c, type: 3}
 --- !u!1 &1737335697
 GameObject:
   m_ObjectHideFlags: 0
