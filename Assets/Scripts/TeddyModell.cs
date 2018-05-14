@@ -5,13 +5,11 @@ using UnityEngine.UI;
 
 public class TeddyModell : MonoBehaviour {
 
-    public double hp, ammoCarriedByTeddy;
+    public double hp = 10; 
+    public int ammoCarriedByTeddy;
     public bool safe;
 
-    private void Start()
-    {
-        hp = 10;
-        ammoCarriedByTeddy = 2;
+    private void Start(){
         safe = false;
     }
 
