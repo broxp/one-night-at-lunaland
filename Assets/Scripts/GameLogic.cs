@@ -9,7 +9,13 @@ public class GameLogic : MonoBehaviour
 {
     public static GameLogic instance = null;
 
-	public double ammo, monsterDmg, safety, maxSafety, safetyDelta, phaseTwoThreshold, phaseTwoRepelThreshold;
+    public int ammo = 0;
+    public double safety;
+    public double safetyDelta;
+    public double maxSafety = 40; 
+    public double phaseTwoRepelThreshold;
+    public double phaseTwoThreshold;
+    public double monsterDmg;
     public GameObject[] toggelables;
 	public GameObject luna, teddy;
 	public float charactersOffset;
@@ -35,6 +41,7 @@ public class GameLogic : MonoBehaviour
     //Alle Rampen in die Liste aufnehmen
     private void Start()
     {
+        safety = maxSafety;
         toggelables = GameObject.FindGameObjectsWithTag("UpRamp");
         phaseTwoTriggered = false;
         gamePaused = false;
