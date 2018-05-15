@@ -10,8 +10,6 @@ public class TeddyModell : MonoBehaviour {
 
     private void Start()
     {
-        hp = 10;
-        ammoCarriedByTeddy = 2;
         safe = false;
     }
 
