@@ -1461,10 +1461,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {x: 0, y: 0}
-  walk: {fileID: 0}
-  run: {fileID: 0}
-  idle: {fileID: 0}
-  fall: {fileID: 0}
+  walk: {fileID: 11400000, guid: 290904e1b9c630640ad79843188d2956, type: 2}
+  run: {fileID: 11400000, guid: 777baa21649281a4ab31ad39fa47d5bf, type: 2}
+  idle: {fileID: 11400000, guid: 6e1bfa836d4da3e4198861c083e17696, type: 2}
+  fall: {fileID: 11400000, guid: 331df56f59c9f4a40a587461ce400d0e, type: 2}
 --- !u!58 &1188996109
 CircleCollider2D:
   m_ObjectHideFlags: 0

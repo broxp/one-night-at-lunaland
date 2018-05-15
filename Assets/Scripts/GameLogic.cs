@@ -9,10 +9,9 @@ public class GameLogic : MonoBehaviour
 {
     public static GameLogic instance = null;
 
-	public double ammo, monsterDmg, safety, maxSafety, safetyDelta, phaseTwoThreshold, phaseTwoRepelThreshold;
+	public float ammo, monsterDmg, safety, maxSafety, safetyDelta, phaseTwoThreshold, phaseTwoRepelThreshold, charactersOffset;
     public GameObject[] toggelables;
 	public GameObject luna, teddy;
-	public float charactersOffset;
     public bool gamePaused;
 
     private bool phaseTwoTriggered;

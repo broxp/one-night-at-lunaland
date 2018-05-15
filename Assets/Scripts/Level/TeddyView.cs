@@ -11,14 +11,14 @@ public class TeddyView : MonoBehaviour {
     public AnimationReferenceAsset run;
     public AnimationReferenceAsset idle;
     public AnimationReferenceAsset fall;
-
     SkeletonAnimation skeletonAnimation;
+
     AnimationReferenceAsset targetAnimation;
     AnimationReferenceAsset previousTargetAnimation;
 
     void Start ()
     {
-        skeletonAnimation = GetComponent<SkeletonAnimation>();
+        skeletonAnimation = GetComponentInChildren<SkeletonAnimation>();
 	}
 
     private void Update()
@@ -32,7 +32,7 @@ public class TeddyView : MonoBehaviour {
         }
         else
         {
-            targetAnimation = Mathf.Abs(input.x) > 0.6f ? run : walk;
+            targetAnimation = Mathf.Abs(input.x) > 0.3f ? run : walk;
         }
 
 
