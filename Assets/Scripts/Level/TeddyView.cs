@@ -6,21 +6,19 @@ using Spine.Unity;
 public class TeddyView : MonoBehaviour {
 
     public Vector2 input;
-    public SkeletonAnimation skeletonAnimation;
     //public TransitionDictionaryExample transitions;
     public AnimationReferenceAsset walk;
     public AnimationReferenceAsset run;
     public AnimationReferenceAsset idle;
-    public AnimationReferenceAsset jump;
     public AnimationReferenceAsset fall;
 
-    SkeletonAnimation skeletanAnimation;
+    SkeletonAnimation skeletonAnimation;
     AnimationReferenceAsset targetAnimation;
     AnimationReferenceAsset previousTargetAnimation;
 
     void Start ()
     {
-        skeletanAnimation = GetComponent<SkeletonAnimation>();
+        skeletonAnimation = GetComponent<SkeletonAnimation>();
 	}
 
     private void Update()
@@ -63,7 +61,7 @@ public class TeddyView : MonoBehaviour {
         // Face intended direction.
         if (input.x != 0)
         {
-            skeletonAnimation.Skeleton.FlipX = input.x < 0;
+            skeletonAnimation.Skeleton.FlipX = input.x > 0;
         }
     }
 }

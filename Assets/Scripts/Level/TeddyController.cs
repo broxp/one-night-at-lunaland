@@ -39,6 +39,7 @@ public class TeddyController : MonoBehaviour {
 
         // Pass all parameters to the character control script.
         teddyView.input.x = h;
+        teddyModell.Move(h);
     }
 }
 

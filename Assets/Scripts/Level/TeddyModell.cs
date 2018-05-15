@@ -8,9 +8,12 @@ public class TeddyModell : MonoBehaviour {
     public double hp, ammoCarriedByTeddy;
     public bool safe;
 
+    Rigidbody2D rigidbody;
+
     private void Start()
     {
         safe = false;
+        rigidbody = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -82,6 +85,11 @@ public class TeddyModell : MonoBehaviour {
     {
         CanvasView.instance.ammoCarriedByTeddy = ammoCarriedByTeddy;
         CanvasView.instance.hp = hp;
+    }
+
+    public void Move(float _moveVector)
+    {
+        rigidbody.AddForce(new Vector2(_moveVector, 0));
     }
 
     //Nach oben gehen
