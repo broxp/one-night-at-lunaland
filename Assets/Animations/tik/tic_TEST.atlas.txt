@@ -1,0 +1,104 @@
+
+tic_TEST.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+arm links
+  rotate: false
+  xy: 421, 88
+  size: 37, 27
+  orig: 37, 27
+  offset: 0, 0
+  index: -1
+arm rechts
+  rotate: false
+  xy: 176, 42
+  size: 43, 13
+  orig: 43, 13
+  offset: 0, 0
+  index: -1
+augen
+  rotate: false
+  xy: 347, 57
+  size: 54, 34
+  orig: 54, 34
+  offset: 0, 0
+  index: -1
+augenbraue links
+  rotate: false
+  xy: 221, 41
+  size: 18, 14
+  orig: 18, 14
+  offset: 0, 0
+  index: -1
+augenbraue rechts
+  rotate: false
+  xy: 403, 71
+  size: 14, 20
+  orig: 14, 20
+  offset: 0, 0
+  index: -1
+bauch
+  rotate: true
+  xy: 176, 57
+  size: 58, 93
+  orig: 58, 93
+  offset: 0, 0
+  index: -1
+bein links
+  rotate: true
+  xy: 2, 2
+  size: 22, 73
+  orig: 22, 73
+  offset: 0, 0
+  index: -1
+bein rechts
+  rotate: true
+  xy: 347, 93
+  size: 22, 72
+  orig: 22, 72
+  offset: 0, 0
+  index: -1
+kopf
+  rotate: false
+  xy: 271, 52
+  size: 74, 63
+  orig: 74, 63
+  offset: 0, 0
+  index: -1
+mund
+  rotate: false
+  xy: 460, 102
+  size: 33, 13
+  orig: 33, 13
+  offset: 0, 0
+  index: -1
+ohr links
+  rotate: true
+  xy: 83, 40
+  size: 75, 91
+  orig: 75, 91
+  offset: 0, 0
+  index: -1
+ohr rechts
+  rotate: false
+  xy: 2, 26
+  size: 79, 89
+  orig: 79, 89
+  offset: 0, 0
+  index: -1
+pupille links
+  rotate: false
+  xy: 495, 101
+  size: 14, 14
+  orig: 14, 14
+  offset: 0, 0
+  index: -1
+pupille rechts
+  rotate: false
+  xy: 241, 41
+  size: 14, 14
+  orig: 14, 14
+  offset: 0, 0
+  index: -1
