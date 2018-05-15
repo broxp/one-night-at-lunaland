@@ -2,30 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
-using UnityStandardAssets._2D;
 
-[RequireComponent(typeof(PlatformerCharacter2D))]
 public class TeddyController : MonoBehaviour {
 
     private TeddyModell teddyModell;
-    private PlatformerCharacter2D m_Character;
-    private bool m_Jump;
+    private TeddyView teddyView;
 
 
     private void Awake()
     {
-        m_Character = GetComponent<PlatformerCharacter2D>();
+        teddyView = GetComponent<TeddyView>();
         teddyModell = GetComponent<TeddyModell>();
     }
 
 
     private void Update()
     {
-        //if (!m_Jump)
-        //{
-        // Read the jump input in Update so button presses aren't missed.
-        //    m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
-        //}
         if(CrossPlatformInputManager.GetButtonDown("Repel"))
         {
             teddyModell.ActivateLight();
@@ -46,8 +38,7 @@ public class TeddyController : MonoBehaviour {
         }
 
         // Pass all parameters to the character control script.
-        m_Character.Move(h, crouch, m_Jump);
-        //m_Jump = false;
+        teddyView.input.x = h;
     }
 }
 
