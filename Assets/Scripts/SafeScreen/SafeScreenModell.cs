@@ -44,11 +44,6 @@ public class SafeScreenModell : MonoBehaviour {
 
         Vector2 newScaleVector = new Vector2(newScale * originalScale.x, newScale * originalScale.y);
 
-        if(!facingRight)
-        {
-            newScaleVector.x *= -1;
-        }
-
         transform.localScale = newScaleVector;
     }
 

@@ -9,6 +9,9 @@ public class CanvasView : MonoBehaviour {
     public double hp, ammoCarriedByTeddy, ammo, safety;
     public static CanvasView instance = null;
     public GameObject PickUpItemBubble, LeaveItemBubble, UpBubble, DownBubble;
+    public Transform tikUI1, tikUI2;
+
+    Camera cam;
 
     private void Update()
     {
@@ -29,6 +32,12 @@ public class CanvasView : MonoBehaviour {
         }
     }
 
+    //Get Camera Reference
+    private void Start()
+    {
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+    }
+
     //UI für Wegekreuzung
     public GameObject ShowItemBubble()
     {
@@ -47,8 +56,8 @@ public class CanvasView : MonoBehaviour {
         GameObject upBubble = GameObject.Instantiate(UpBubble, transform);
         GameObject downBubble = GameObject.Instantiate(DownBubble, transform);
 
-        upBubble.transform.position += new Vector3(0, 200, 0);
-        downBubble.transform.position += new Vector3(0, -200, 0);
+        upBubble.transform.position = cam.WorldToScreenPoint(tikUI1.position);
+        downBubble.transform.position = cam.WorldToScreenPoint(tikUI2.position);
     }
 
     //Löscht alle UI-Elemente mit dem "Bubble"-Tag (also alle Sprechblasen)

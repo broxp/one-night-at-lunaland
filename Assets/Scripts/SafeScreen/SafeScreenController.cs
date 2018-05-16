@@ -7,9 +7,11 @@ public class SafeScreenController : MonoBehaviour {
 
     float xInput, yInput;
     SafeScreenModell safeScreenModell;
+    SafeScreenView safeScreenView;
 
 	void Start ()
     {
+        safeScreenView = GetComponent<SafeScreenView>();
         safeScreenModell = GetComponent<SafeScreenModell>();
 	}
 	
@@ -22,5 +24,7 @@ public class SafeScreenController : MonoBehaviour {
     private void FixedUpdate()
     {
         safeScreenModell.Move(xInput, yInput);
+        safeScreenView.input.x = xInput;
+        safeScreenView.input.y = yInput;
     }
 }
