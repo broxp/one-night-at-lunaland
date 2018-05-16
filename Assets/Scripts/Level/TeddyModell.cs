@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TeddyModell : MonoBehaviour {
 
-    public double hp, ammoCarriedByTeddy;
+    public float hp, ammoCarriedByTeddy, movementForce;
     public bool safe;
 
     Rigidbody2D rigidbody;
@@ -89,7 +89,7 @@ public class TeddyModell : MonoBehaviour {
 
     public void Move(float _moveVector)
     {
-        rigidbody.AddForce(new Vector2(_moveVector, 0));
+        rigidbody.velocity = (new Vector2(_moveVector * movementForce, rigidbody.velocity.y));
     }
 
     //Nach oben gehen
@@ -136,7 +136,10 @@ public class TeddyModell : MonoBehaviour {
         ammoCarriedByTeddy = 0;
 
         //Timer auf Phase 2 resetten
-        GameLogic.instance.safety = GameLogic.instance.phaseTwoThreshold;
+        if(GameLogic.instance.safety < GameLogic.instance.phaseTwoThreshold)
+        {
+            GameLogic.instance.safety = GameLogic.instance.phaseTwoThreshold;
+        }
 
         //Sicherer Status für Teddy
         safe = true;
