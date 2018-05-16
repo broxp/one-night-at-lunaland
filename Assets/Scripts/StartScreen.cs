@@ -37,7 +37,7 @@ public class StartScreen : MonoBehaviour
                 stage++;
                 break;
             case 3:
-                //hypniotisieren, ganz viele münz-geräusche
+                PlaySound(0);
                 stage++;
                 break;
         }
@@ -65,7 +65,6 @@ public class StartScreen : MonoBehaviour
         audiosource = GetComponent<AudioSource>(); // get AudioSource component
         y0 = mouth.transform.position.y;
         freqData = new float[nSamples];
-        audiosource.Play();
     }
 
     void Update()
@@ -73,7 +72,7 @@ public class StartScreen : MonoBehaviour
         if(Input.GetButtonDown("Fire1"))
         {
             InsertCoin();
-            PlaySound(0);
+            AudioModell.instance.PlayAudio("Coin");
         }
         Vector3 _mouthPos = mouth.transform.position;
         _mouthPos.y = y0 - BandVol(frqLow, frqHigh) * volume;
