@@ -24,19 +24,25 @@ public class StartScreen : MonoBehaviour
         {
             case 0:
                 shadowbox.SetActive(true);
+                AudioModell.instance.PlayAudio("Coin");
                 stage++;
                 break;
             case 1:
+                //STROBO EFFEKTE
                 hands.SetActive(true);
                 ball.SetActive(true);
+                AudioModell.instance.PlayAudio("Coin");
                 stage++;
                 break;
             case 2:
+                //STROBO EFFEKT
                 lightaura.SetActive(true);
                 eyes.SetActive(false);
+                AudioModell.instance.PlayAudio("Coin");
                 stage++;
                 break;
             case 3:
+                //VIELE MÜNZEN SOUND
                 PlaySound(0);
                 stage++;
                 break;
@@ -72,7 +78,7 @@ public class StartScreen : MonoBehaviour
         if(Input.GetButtonDown("Fire1"))
         {
             InsertCoin();
-            AudioModell.instance.PlayAudio("Coin");
+            
         }
         Vector3 _mouthPos = mouth.transform.position;
         _mouthPos.y = y0 - BandVol(frqLow, frqHigh) * volume;
