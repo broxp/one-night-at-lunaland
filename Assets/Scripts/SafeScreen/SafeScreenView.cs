@@ -5,15 +5,13 @@ using Spine.Unity;
 
 public class SafeScreenView : MonoBehaviour
 {
-
+    public SkeletonDataAsset frontSkeletonData, backSkeletonData;
     public Vector2 input;
+    public float walkAnimationSpeed;
     //public TransitionDictionaryExample transitions;
-    public AnimationReferenceAsset walk;
-    public AnimationReferenceAsset run;
-    public AnimationReferenceAsset idle;
-    public AnimationReferenceAsset fall;
-    SkeletonAnimation skeletonAnimation;
+    public AnimationReferenceAsset walkFront, walkBack, idle;
 
+    SkeletonAnimation skeletonAnimation;
     AnimationReferenceAsset targetAnimation;
     AnimationReferenceAsset previousTargetAnimation;
 
@@ -31,11 +29,21 @@ public class SafeScreenView : MonoBehaviour
         {
             targetAnimation = idle;
             skeletonAnimation.timeScale = 1;
+            skeletonAnimation.skeletonDataAsset = frontSkeletonData;
+        }
+        else if(input.y > 0)
+        {
+            targetAnimation = walkBack;
+            skeletonAnimation.timeScale = walkAnimationSpeed;
+            skeletonAnimation.skeletonDataAsset = backSkeletonData;
+            //skeletonAnimation.skeleton.up
+              
         }
         else
         {
-            targetAnimation = walk;
-            skeletonAnimation.timeScale = 2.2f;
+            targetAnimation = walkFront;
+            skeletonAnimation.timeScale = walkAnimationSpeed;
+            skeletonAnimation.skeletonDataAsset = frontSkeletonData;
         }
 
 
@@ -43,6 +51,8 @@ public class SafeScreenView : MonoBehaviour
         // Handle change in target animation.
         if (previousTargetAnimation != targetAnimation)
         {
+            skeletonAnimation.ClearState();
+            skeletonAnimation.Initialize(true);
             Spine.Animation transition = null;
             //if (transitions != null && previousTargetAnimation != null)
             //{

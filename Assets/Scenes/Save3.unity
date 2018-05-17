@@ -141,6 +141,156 @@ Transform:
   m_Father: {fileID: 757291720}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &201889958
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4030115045451558, guid: bfe352d900d15464bb9c15830da4a7aa, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030115045451558, guid: bfe352d900d15464bb9c15830da4a7aa, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030115045451558, guid: bfe352d900d15464bb9c15830da4a7aa, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030115045451558, guid: bfe352d900d15464bb9c15830da4a7aa, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030115045451558, guid: bfe352d900d15464bb9c15830da4a7aa, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030115045451558, guid: bfe352d900d15464bb9c15830da4a7aa, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030115045451558, guid: bfe352d900d15464bb9c15830da4a7aa, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030115045451558, guid: bfe352d900d15464bb9c15830da4a7aa, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114458572518514634, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: maxYPositionTransform
+      value: 
+      objectReference: {fileID: 124882587}
+    - target: {fileID: 114458572518514634, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: minYPositionTransform
+      value: 
+      objectReference: {fileID: 644251344}
+    - target: {fileID: 33649030177279796, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4569219824895848, guid: bfe352d900d15464bb9c15830da4a7aa, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114451850412204348, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: maxYPositionTransform
+      value: 
+      objectReference: {fileID: 124882587}
+    - target: {fileID: 114451850412204348, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: minYPositionTransform
+      value: 
+      objectReference: {fileID: 644251344}
+    - target: {fileID: 114451850412204348, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: maxSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114136600838547614, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: timeScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1714564226629146, guid: bfe352d900d15464bb9c15830da4a7aa, type: 2}
+      propertyPath: m_Name
+      value: LunaSaveScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 4569219824895848, guid: bfe352d900d15464bb9c15830da4a7aa, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114136600838547614, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: skeletonDataAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 838dedfc9ceafdf41bc57f8329055bac,
+        type: 2}
+    - target: {fileID: 23598679559291416, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9b8bdf038494c404791ba52f3ef281a2, type: 2}
+    - target: {fileID: 114208527588320360, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: frontSkeletonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 838dedfc9ceafdf41bc57f8329055bac,
+        type: 2}
+    - target: {fileID: 114208527588320360, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: backSkeletondata
+      value: 
+      objectReference: {fileID: 11400000, guid: 7ba13c766303fd047ad58c7b5ae6185e,
+        type: 2}
+    - target: {fileID: 114208527588320360, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: walkBack
+      value: 
+      objectReference: {fileID: 11400000, guid: 91a835bb0ce9f2746bbdc7bc80f1903e,
+        type: 2}
+    - target: {fileID: 114208527588320360, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: walkFront
+      value: 
+      objectReference: {fileID: 11400000, guid: 9dc8338744d8fe247aa1d033897601a1,
+        type: 2}
+    - target: {fileID: 4569219824895848, guid: bfe352d900d15464bb9c15830da4a7aa, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 114208527588320360, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: backSkeletonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 7ba13c766303fd047ad58c7b5ae6185e,
+        type: 2}
+    - target: {fileID: 114208527588320360, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: idle
+      value: 
+      objectReference: {fileID: 11400000, guid: 35cb43f76b4d49f41887c0f69049deaf,
+        type: 2}
+    - target: {fileID: 114208527588320360, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: walkAnimationSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114136600838547614, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: _animationName
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: bfe352d900d15464bb9c15830da4a7aa, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &644251343
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,6 +1097,52 @@ Prefab:
     - target: {fileID: 1714564226629146, guid: bfe352d900d15464bb9c15830da4a7aa, type: 2}
       propertyPath: m_Name
       value: TikSaveScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 23598679559291416, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 331070bb5a2f91740a396acc57845013, type: 2}
+    - target: {fileID: 114136600838547614, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: skeletonDataAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 892b56438565207469215ea29aa83896,
+        type: 2}
+    - target: {fileID: 114208527588320360, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: walkFront
+      value: 
+      objectReference: {fileID: 11400000, guid: 875524552e26c024e83b466870373fc2,
+        type: 2}
+    - target: {fileID: 114208527588320360, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: idle
+      value: 
+      objectReference: {fileID: 11400000, guid: bcd853c7af76b544a94085e14e25f320,
+        type: 2}
+    - target: {fileID: 114208527588320360, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: walkBack
+      value: 
+      objectReference: {fileID: 11400000, guid: 875524552e26c024e83b466870373fc2,
+        type: 2}
+    - target: {fileID: 114208527588320360, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: frontSkeletonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 892b56438565207469215ea29aa83896,
+        type: 2}
+    - target: {fileID: 114208527588320360, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: backSkeletonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 892b56438565207469215ea29aa83896,
+        type: 2}
+    - target: {fileID: 114208527588320360, guid: bfe352d900d15464bb9c15830da4a7aa,
+        type: 2}
+      propertyPath: walkAnimationSpeed
+      value: 2.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bfe352d900d15464bb9c15830da4a7aa, type: 2}

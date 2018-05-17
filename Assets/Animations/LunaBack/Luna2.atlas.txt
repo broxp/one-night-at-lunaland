@@ -1,0 +1,62 @@
+
+Luna2.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+arm links
+  rotate: true
+  xy: 283, 4
+  size: 46, 62
+  orig: 46, 62
+  offset: 0, 0
+  index: -1
+arm rechts
+  rotate: true
+  xy: 402, 2
+  size: 55, 67
+  orig: 55, 67
+  offset: 0, 0
+  index: -1
+bein links
+  rotate: true
+  xy: 283, 90
+  size: 36, 118
+  orig: 36, 118
+  offset: 0, 0
+  index: -1
+bein rechts
+  rotate: true
+  xy: 283, 52
+  size: 36, 117
+  orig: 36, 117
+  offset: 0, 0
+  index: -1
+haare kurz
+  rotate: true
+  xy: 2, 23
+  size: 103, 153
+  orig: 103, 153
+  offset: 0, 0
+  index: -1
+klamotten obenrum
+  rotate: true
+  xy: 403, 59
+  size: 67, 68
+  orig: 67, 68
+  offset: 0, 0
+  index: -1
+klamotten untenrum
+  rotate: false
+  xy: 157, 16
+  size: 124, 110
+  orig: 124, 110
+  offset: 0, 0
+  index: -1
+ohr
+  rotate: false
+  xy: 473, 93
+  size: 34, 33
+  orig: 34, 33
+  offset: 0, 0
+  index: -1
