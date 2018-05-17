@@ -3,7 +3,6 @@
 
 | Aufgabe | Zugewiesen an | Status | Notiz |
 | ------- | ------------- | ------ | ----- |
-
 | Grafik in Level einbinden| Johannes | TODO | Auch Pfade an Optik anpassen|
 | Soundsystem in Unity | Jan | TODO | |
 | Sounds rausschen | Mike | TODO | selbstgemacht? |
