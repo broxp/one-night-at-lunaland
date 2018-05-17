@@ -71,8 +71,8 @@ MonoBehaviour:
   safetyDelta: -1
   phaseTwoThreshold: 6
   phaseTwoRepelThreshold: 2
+  charactersOffset: 0.5
   toggelables: []
   luna: {fileID: 0}
   teddy: {fileID: 0}
-  charactersOffset: 0.5
   gamePaused: 0

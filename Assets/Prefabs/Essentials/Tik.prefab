@@ -238,10 +238,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {x: 0, y: 0}
-  walk: {fileID: 0}
-  run: {fileID: 0}
-  idle: {fileID: 0}
-  fall: {fileID: 0}
+  walk: {fileID: 11400000, guid: 875524552e26c024e83b466870373fc2, type: 2}
+  run: {fileID: 11400000, guid: 9abbd59f78e710f42a12faca18f088cd, type: 2}
+  idle: {fileID: 11400000, guid: bcd853c7af76b544a94085e14e25f320, type: 2}
+  fall: {fileID: 11400000, guid: c698ad79e7915294997a955a8109c605, type: 2}
 --- !u!114 &114394500558350950
 MonoBehaviour:
   m_ObjectHideFlags: 1

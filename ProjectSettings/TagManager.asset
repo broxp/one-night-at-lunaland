@@ -10,6 +10,8 @@ TagManager:
   - Bubble
   - UpRamp
   - Luna
+  - UI1
+  - UI2
   layers:
   - Default
   - TransparentFX

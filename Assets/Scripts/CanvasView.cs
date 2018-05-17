@@ -36,7 +36,7 @@ public class CanvasView : MonoBehaviour {
     private void Start()
     {
         tikUI1 = GameObject.FindGameObjectWithTag("UI1").transform;
-        tikUI1 = GameObject.FindGameObjectWithTag("UI2").transform;
+        tikUI2 = GameObject.FindGameObjectWithTag("UI2").transform;
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
@@ -57,6 +57,7 @@ public class CanvasView : MonoBehaviour {
     {
         GameObject upBubble = GameObject.Instantiate(UpBubble, transform);
         GameObject downBubble = GameObject.Instantiate(DownBubble, transform);
+
 
         upBubble.transform.position = cam.WorldToScreenPoint(tikUI1.position);
         downBubble.transform.position = cam.WorldToScreenPoint(tikUI2.position);
