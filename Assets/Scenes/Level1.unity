@@ -771,8 +771,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammo: 0
   monsterDmg: 1
-  safety: 40
-  maxSafety: 40
+  safety: 14
+  maxSafety: 20
   safetyDelta: -1
   phaseTwoThreshold: 6
   phaseTwoRepelThreshold: 2
