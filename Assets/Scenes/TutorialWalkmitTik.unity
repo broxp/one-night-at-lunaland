@@ -539,6 +539,11 @@ Prefab:
       propertyPath: luna
       value: 
       objectReference: {fileID: 63298268}
+    - target: {fileID: 114678226592544032, guid: 9e6464cc75737e84da3825cf846e0486,
+        type: 2}
+      propertyPath: safety
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e6464cc75737e84da3825cf846e0486, type: 2}
   m_IsPrefabParent: 0
