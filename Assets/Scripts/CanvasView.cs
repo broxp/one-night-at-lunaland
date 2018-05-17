@@ -9,8 +9,8 @@ public class CanvasView : MonoBehaviour {
     public double hp, ammoCarriedByTeddy, ammo, safety;
     public static CanvasView instance = null;
     public GameObject PickUpItemBubble, LeaveItemBubble, UpBubble, DownBubble;
-    public Transform tikUI1, tikUI2;
 
+    Transform tikUI1, tikUI2;
     Camera cam;
 
     private void Update()
@@ -35,6 +35,8 @@ public class CanvasView : MonoBehaviour {
     //Get Camera Reference
     private void Start()
     {
+        tikUI1 = GameObject.FindGameObjectWithTag("UI1").transform;
+        tikUI1 = GameObject.FindGameObjectWithTag("UI2").transform;
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
