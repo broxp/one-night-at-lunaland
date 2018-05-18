@@ -77,6 +77,7 @@ public class StartScreen : MonoBehaviour
 
     void Start()
     {
+        PlaySound(1);
         audiosource = GetComponent<AudioSource>(); // get AudioSource component
         y0 = mouth.transform.position.y;
         freqData = new float[nSamples];

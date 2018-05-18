@@ -10,6 +10,7 @@ public class Save4 : MonoBehaviour {
 
 	void Start () {
         StartCoroutine(NextScene());
+        AudioModell.instance.PlayAudio("music", 0.1f);
 	}
 
     IEnumerator NextScene()

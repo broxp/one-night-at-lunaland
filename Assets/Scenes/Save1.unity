@@ -262,11 +262,16 @@ Prefab:
     - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
       propertyPath: audioEvents.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
       propertyPath: audioEvents.Array.data[0].audioSources.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
+        type: 2}
+      propertyPath: audioEvents.Array.data[1].audioSources.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4367278153297482, guid: 012e531de36de5e4da92f49027eb50eb, type: 2}
@@ -316,6 +321,21 @@ Prefab:
       propertyPath: audioEvents.Array.data[0].audioSources.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 01b5ccc0df79710418e08e1d39a6b066, type: 3}
+    - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
+        type: 2}
+      propertyPath: audioEvents.Array.data[1].name
+      value: music
+      objectReference: {fileID: 0}
+    - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
+        type: 2}
+      propertyPath: audioEvents.Array.data[1].audioSources.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 97d3991d1a0fe404698fc1479bba3c23, type: 3}
+    - target: {fileID: 114309385389016294, guid: 012e531de36de5e4da92f49027eb50eb,
+        type: 2}
+      propertyPath: playMusic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 012e531de36de5e4da92f49027eb50eb, type: 2}
   m_IsPrefabParent: 0
