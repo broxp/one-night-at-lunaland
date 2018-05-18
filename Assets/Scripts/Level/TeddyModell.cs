@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class TeddyModell : MonoBehaviour {
 
-    public float hp, ammoCarriedByTeddy, movementForce;
+    public int ammoCarriedByTeddy;
+    public float hp, movementForce;
     public bool safe;
 
     Rigidbody2D rigidbody;

@@ -8,8 +8,10 @@ public class CanvasView : MonoBehaviour {
     public Text statusText;
     public double hp, ammoCarriedByTeddy, ammo, safety;
     public static CanvasView instance = null;
-    public GameObject PickUpItemBubble, LeaveItemBubble, UpBubble, DownBubble;
+    public GameObject PickUpItemBubble, LeaveItemBubble, UpBubble, DownBubble, matchUI;
+    public Sprite[] matchSprites;
 
+    Image matchImage;
     Transform tikUI1, tikUI2;
     Camera cam;
 
@@ -35,6 +37,7 @@ public class CanvasView : MonoBehaviour {
     //Get Camera Reference
     private void Start()
     {
+        matchImage = matchUI.GetComponent<Image>();
         tikUI1 = GameObject.FindGameObjectWithTag("UI1").transform;
         tikUI2 = GameObject.FindGameObjectWithTag("UI2").transform;
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
@@ -50,6 +53,15 @@ public class CanvasView : MonoBehaviour {
         leaveItemBubble.transform.position += new Vector3(-200, 0, 0);
 
         return pickUpBubble;
+    }
+
+    //Streichhölzer Zahl anpassen
+    public void UpdateMatchCount(int _amount)
+    {
+        if(_amount < matchSprites.Length && _amount >= 0)
+        {
+            matchImage.sprite = matchSprites[_amount];
+        }
     }
 
     //UI für Item-Pickup

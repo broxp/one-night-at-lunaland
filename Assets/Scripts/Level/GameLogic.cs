@@ -9,7 +9,8 @@ public class GameLogic : MonoBehaviour
 {
     public static GameLogic instance = null;
 
-	public float ammo, monsterDmg, safety, maxSafety, safetyDelta, phaseTwoThreshold, phaseTwoRepelThreshold, charactersOffset;
+	public float monsterDmg, safety, maxSafety, safetyDelta, phaseTwoThreshold, phaseTwoRepelThreshold, charactersOffset;
+    public int ammo;
     public GameObject[] toggelables;
 	public GameObject luna, teddy;
     public bool gamePaused;
@@ -129,6 +130,7 @@ public class GameLogic : MonoBehaviour
     {
         CanvasView.instance.safety = safety;
         CanvasView.instance.ammo = ammo;
+        CanvasView.instance.UpdateMatchCount(ammo);
     }
 
     //Wird einmal ausgeführt, wenn Phase 2 startet
