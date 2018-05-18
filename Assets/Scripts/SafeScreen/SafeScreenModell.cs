@@ -5,9 +5,9 @@ using UnityEngine;
 public class SafeScreenModell : MonoBehaviour {
 
     public float maxSpeed;
-    public Transform maxYPositionTransform, minYPositionTransform;
     public float maxScale, minScale;
 
+    Transform maxYPositionTransform, minYPositionTransform;
     Vector2 originalScale;
     Rigidbody2D rigidbody2d;
     bool facingRight = true;
@@ -17,6 +17,8 @@ public class SafeScreenModell : MonoBehaviour {
 
     void Start ()
     {
+        maxYPositionTransform = GameObject.FindGameObjectWithTag("MaxY").transform;
+        minYPositionTransform = GameObject.FindGameObjectWithTag("MinY").transform;
         rigidbody2d = GetComponent<Rigidbody2D>();
         originalScale = transform.localScale;
         maxYPosition = maxYPositionTransform.position.y;

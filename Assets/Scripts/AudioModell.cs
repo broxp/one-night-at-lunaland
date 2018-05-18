@@ -44,8 +44,8 @@ public class AudioModell : MonoBehaviour {
 [System.Serializable]
 public class AudioEvent
 {
-    [Range(0f, 1f)]
-    public float triggerChance = 1f;
+    //[Range(0f, 1f)]
+    //public float triggerChance = 1f;
     public string name;
     
     [SerializeField]
@@ -53,7 +53,8 @@ public class AudioEvent
 
     public AudioClip GetClip()
     {
-        if(Random.Range(0, 1) <= triggerChance)
+        //if(Random.Range(0, 1) <= triggerChance)
+        if (Random.Range(0, 1) <= 1)
         {
             return (audioSources[Random.Range(0, audioSources.Length)]);
         }

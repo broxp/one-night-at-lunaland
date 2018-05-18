@@ -12,6 +12,8 @@ TagManager:
   - Luna
   - UI1
   - UI2
+  - MinY
+  - MaxY
   layers:
   - Default
   - TransparentFX
@@ -21,8 +23,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - TriggerOnly
+  - Trigger
   - 
   - 
   - 
