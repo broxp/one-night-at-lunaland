@@ -22,6 +22,17 @@ public class TeddyController : MonoBehaviour {
         {
             teddyModell.ActivateLight();
         }
+        if(CrossPlatformInputManager.GetAxis("Vertical") != 0)
+        {
+            if(CrossPlatformInputManager.GetAxis("Vertical") < 0)
+            {
+                teddyModell.GoDown();
+            }
+            if (CrossPlatformInputManager.GetAxis("Vertical") > 0)
+            {
+                teddyModell.GoUp();
+            }
+        }
     }
 
 

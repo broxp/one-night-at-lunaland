@@ -7,24 +7,45 @@ public class SafeScreenModell : MonoBehaviour {
     public float maxSpeed;
     public float maxScale, minScale;
 
+    SafeScreenController safeScreenController;
+    SafeScreenView safeScreenView;
     Transform maxYPositionTransform, minYPositionTransform;
     Vector2 originalScale;
     Rigidbody2D rigidbody2d;
     bool facingRight = true;
     float maxYPosition, minYPosition;
+    GameObject box;
 
 
 
     void Start ()
     {
+        safeScreenController = GetComponent<SafeScreenController>();
+        safeScreenView = GetComponent<SafeScreenView>();
+        rigidbody2d = GetComponent<Rigidbody2D>();
         maxYPositionTransform = GameObject.FindGameObjectWithTag("MaxY").transform;
         minYPositionTransform = GameObject.FindGameObjectWithTag("MinY").transform;
-        rigidbody2d = GetComponent<Rigidbody2D>();
         originalScale = transform.localScale;
         maxYPosition = maxYPositionTransform.position.y;
         minYPosition = minYPositionTransform.position.y;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        box = collision.gameObject;
+        safeScreenController.kickingPossible = true;
+    }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        safeScreenController.kickingPossible = false;
+        box = null;
+    }
+
+    public void KickBox()
+    {
+        box.GetComponent<BoxScript>().KickBox(this);
+    }
 
     public void Move(float xInput, float yInput)
     {
