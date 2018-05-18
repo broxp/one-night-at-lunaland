@@ -224,7 +224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 10
   ammoCarriedByTeddy: 0
-  movementForce: 10
+  movementForce: 7
   safe: 0
 --- !u!114 &114384971410387632
 MonoBehaviour:
