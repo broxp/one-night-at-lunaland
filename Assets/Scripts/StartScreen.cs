@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartScreen : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class StartScreen : MonoBehaviour
     public GameObject mouth, background, shadowbox, hands, ball, eyes, lightaura;
     public AudioClip[] sounds; // set the array size and the sounds in the Inspector
     public float volume;
+    public string nextScene;
     //public float mouthMoveSpeed;
 
     float frqLow = 200;
@@ -44,9 +46,16 @@ public class StartScreen : MonoBehaviour
             case 3:
                 //VIELE MÜNZEN SOUND
                 PlaySound(0);
+                StartCoroutine(NextScene());
                 stage++;
                 break;
         }
+    }
+
+    IEnumerator NextScene()
+    {
+        yield return new WaitForSeconds(sounds[0].length);
+        SceneManager.LoadScene(nextScene);
     }
 
     float BandVol(float fLow, float fHigh)

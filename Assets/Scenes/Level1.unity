@@ -745,6 +745,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4901641535666220, guid: d1c5f4a11669a9b40bb2f640c5950a6f,
     type: 2}
   m_PrefabInternal: {fileID: 2008891436}
+--- !u!1 &779304245 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1106304994420216, guid: 3c4b5dbe15509264fa0f59f5cedf52f5,
+    type: 2}
+  m_PrefabInternal: {fileID: 2106099557}
 --- !u!1 &796625854
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,7 +777,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25efa1cb85314124cb8e041ec77f9928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammo: 0
   monsterDmg: 1
   safety: 11
   maxSafety: 11
@@ -780,8 +784,9 @@ MonoBehaviour:
   phaseTwoThreshold: 6
   phaseTwoRepelThreshold: 2
   charactersOffset: 0.5
+  ammo: 0
   toggelables: []
-  luna: {fileID: 0}
+  luna: {fileID: 779304245}
   teddy: {fileID: 587574814}
   gamePaused: 0
 --- !u!4 &796625856

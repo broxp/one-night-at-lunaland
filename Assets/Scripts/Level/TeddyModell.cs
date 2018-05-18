@@ -41,12 +41,7 @@ public class TeddyModell : MonoBehaviour {
         if (collision.gameObject.tag == "PickUp")
         {
             print("Item");
-
-            //Erstellt die Buttons visuell, gibt Referenz auf den Pick-Up Button zurück
-            GameObject pickUpBubble = CanvasView.instance.ShowItemBubble();
-
-            //Fügt dem Pick-Up Button FUnktionalität hinzu
-            pickUpBubble.GetComponent<Button>().onClick.AddListener(delegate { PickItemUp(collision.gameObject); });
+            PickItemUp(collision.gameObject);
         }
 
         else if (collision.gameObject.tag == "Crossing")
@@ -100,6 +95,7 @@ public class TeddyModell : MonoBehaviour {
         GameLogic.instance.gamePaused = false;
         GameLogic.instance.ActivateUpWays();
         CanvasView.instance.ClearBubbles();
+        AudioModell.instance.PlayAudio("suffering");
     }
 
     //Nach unten gehen
@@ -131,6 +127,8 @@ public class TeddyModell : MonoBehaviour {
     void BackToLuna()
     {
         print("back!");
+
+        AudioModell.instance.PlayAudio("happy");
 
         //Munition übergeben
         GameLogic.instance.ammo += ammoCarriedByTeddy;
