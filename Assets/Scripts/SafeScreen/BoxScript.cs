@@ -21,21 +21,22 @@ public class BoxScript : MonoBehaviour {
         {
             case 0:
                 spriteRenderer.sprite = box2;
-                //AudioModell.instance.PlayAudio("Kick");
+                AudioModell.instance.PlayAudio("kick");
+                AudioModell.instance.PlayAudio("noboxkickingpls");
                 stage++;
                 break;
             case 1:
                 spriteRenderer.sprite = box3;
-                //AudioModell.instance.PlayAudio("Kick");
+                AudioModell.instance.PlayAudio("kick");
                 stage++;
                 break;
             case 2:
                 spriteRenderer.sprite = box4;
-                //AudioModell.instance.PlayAudio("Kick");
+                AudioModell.instance.PlayAudio("kick");
                 stage++;
                 break;
             case 3:
-                //AudioModell.instance.PlayAudio("Kick");
+                AudioModell.instance.PlayAudio("kick");
                 _safeScreenModell.OnTriggerExit2D(null);
                 key.SetActive(true);
                 Destroy(this.gameObject);
