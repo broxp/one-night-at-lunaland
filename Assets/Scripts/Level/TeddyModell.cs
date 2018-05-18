@@ -95,7 +95,7 @@ public class TeddyModell : MonoBehaviour {
         GameLogic.instance.gamePaused = false;
         GameLogic.instance.ActivateUpWays();
         CanvasView.instance.ClearBubbles();
-        AudioModell.instance.PlayAudio("suffering");
+        //AudioModell.instance.PlayAudio("suffering");
     }
 
     //Nach unten gehen
@@ -128,7 +128,7 @@ public class TeddyModell : MonoBehaviour {
     {
         print("back!");
 
-        AudioModell.instance.PlayAudio("happy");
+        //AudioModell.instance.PlayAudio("happy");
 
         //Munition übergeben
         GameLogic.instance.ammo += ammoCarriedByTeddy;
@@ -149,5 +149,10 @@ public class TeddyModell : MonoBehaviour {
     public void ActivateLight()
     {
         GameLogic.instance.RepelMonster();
+    }
+
+    private void OnDestroy()
+    {
+        UberManager.instance.hp = hp;
     }
 }

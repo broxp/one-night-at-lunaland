@@ -48,6 +48,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Save5.unity
     guid: 19d8b393c169e464589bc7dc84fe6eaa
   - enabled: 1
+    path: Assets/Scenes/Tutorial1.unity
+    guid: c44b43dccd0285441801a38229d3cd5c
+  - enabled: 1
     path: Assets/Scenes/TutorialWalkmitTik.unity
     guid: 4abd3c042aa344fad8e08da9ccabb4a5
   m_configObjects: {}

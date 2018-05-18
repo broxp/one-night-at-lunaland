@@ -105,17 +105,17 @@ public class GameLogic : MonoBehaviour
         {
             print("light!");
             ammo--;
-            AudioModell.instance.PlayAudio("match");
+            //AudioModell.instance.PlayAudio("match");
 
             if (safety <= phaseTwoRepelThreshold)
             {
                 safety = maxSafety;
-                AudioModell.instance.PlayAudio("repelled");
+                //AudioModell.instance.PlayAudio("repelled");
             }
             else
             {
                 safety = phaseTwoThreshold;
-                AudioModell.instance.PlayAudio("tooEarly");
+                //AudioModell.instance.PlayAudio("tooEarly");
             }
                 
         }
@@ -143,6 +143,6 @@ public class GameLogic : MonoBehaviour
     //Wird einmal ausgeführt, wenn Phase 2 startet
     void MonsterPhase2()
     {
-        AudioModell.instance.PlayAudio("monsterPhase2");
+        //AudioModell.instance.PlayAudio("monsterPhase2");
     }
 }

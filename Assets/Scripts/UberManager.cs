@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UberManager : MonoBehaviour {
 
+    public float hp = 0;
     public int matches = 0;
     public static UberManager instance = null;
 
