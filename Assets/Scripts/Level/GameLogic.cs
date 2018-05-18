@@ -38,6 +38,7 @@ public class GameLogic : MonoBehaviour
         toggelables = GameObject.FindGameObjectsWithTag("UpRamp");
         phaseTwoTriggered = false;
         gamePaused = false;
+        ammo = UberManager.instance.matches;
     }
 
     void Update ()
@@ -123,6 +124,12 @@ public class GameLogic : MonoBehaviour
             //SOUND KEINE MATCHES
             print("not enough matches");
         }
+    }
+
+    //Save Match amount
+    private void OnDestroy()
+    {
+        UberManager.instance.matches = ammo;
     }
 
     //CanvasView aktualisieren
