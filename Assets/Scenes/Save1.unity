@@ -241,7 +241,7 @@ Prefab:
         type: 2}
       propertyPath: audioEvents.Array.data[0].audioSources.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 59ab37f5dbedfd34e94f1fbbbb33b892, type: 3}
+      objectReference: {fileID: 8300000, guid: 01b5ccc0df79710418e08e1d39a6b066, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 012e531de36de5e4da92f49027eb50eb, type: 2}
   m_IsPrefabParent: 0
