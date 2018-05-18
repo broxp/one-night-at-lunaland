@@ -209,7 +209,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4797514374333272, guid: 9e6464cc75737e84da3825cf846e0486, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114678226592544032, guid: 9e6464cc75737e84da3825cf846e0486,
         type: 2}
@@ -1169,7 +1169,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4120790292139616, guid: 3c4b5dbe15509264fa0f59f5cedf52f5, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 33551204088344336, guid: 3c4b5dbe15509264fa0f59f5cedf52f5,
         type: 2}
@@ -2139,7 +2139,7 @@ Prefab:
     - target: {fileID: 224588065077502124, guid: a6decaee14e18a842943139c9a26d1c1,
         type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 224588065077502124, guid: a6decaee14e18a842943139c9a26d1c1,
         type: 2}
@@ -3254,7 +3254,7 @@ MonoBehaviour:
   target: {fileID: 1743611167}
   offset: {x: 0, y: 0, z: 0}
   min: {x: 8, y: 5, z: 0}
-  max: {x: 300, y: 12, z: 0}
+  max: {x: 260, y: 12, z: 0}
   smoothing: 5
 --- !u!1001 &1844424186
 Prefab:
@@ -3623,7 +3623,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4373775519384884, guid: 613948375f118734591d21e1f3dd2f93, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 33946978166449328, guid: 613948375f118734591d21e1f3dd2f93,
         type: 2}
