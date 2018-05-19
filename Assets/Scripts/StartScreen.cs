@@ -26,21 +26,21 @@ public class StartScreen : MonoBehaviour
         {
             case 0:
                 shadowbox.SetActive(true);
-                AudioModell.instance.PlayAudio("Coin");
+                AudioModell.instance.PlayAudio("Coin", 0.5f);
                 stage++;
                 break;
             case 1:
                 //STROBO EFFEKTE
                 hands.SetActive(true);
                 ball.SetActive(true);
-                AudioModell.instance.PlayAudio("Coin");
+                AudioModell.instance.PlayAudio("Coin", 0.5f);
                 stage++;
                 break;
             case 2:
                 //STROBO EFFEKT
                 lightaura.SetActive(true);
                 eyes.SetActive(false);
-                AudioModell.instance.PlayAudio("Coin");
+                AudioModell.instance.PlayAudio("Coin", 0.5f);
                 stage++;
                 break;
             case 3:

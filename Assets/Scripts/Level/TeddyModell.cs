@@ -149,6 +149,7 @@ public class TeddyModell : MonoBehaviour {
     public void ActivateLight()
     {
         GameLogic.instance.RepelMonster();
+        AudioModell.instance.PlayAudio("match");
     }
 
     private void OnDestroy()
