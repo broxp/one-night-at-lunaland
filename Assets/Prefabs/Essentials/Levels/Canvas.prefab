@@ -137,6 +137,15 @@ MonoBehaviour:
   - name: match
     audioSources:
     - {fileID: 8300000, guid: ed68abb86bb8148418250604ca4b18ad, type: 3}
+  - name: tik
+    audioSources:
+    - {fileID: 8300000, guid: c1114432f2a34674ab5df568b10a4dd0, type: 3}
+  - name: music
+    audioSources:
+    - {fileID: 8300000, guid: 97d3991d1a0fe404698fc1479bba3c23, type: 3}
+  - name: match
+    audioSources:
+    - {fileID: 8300000, guid: 8d60106f3758fa24e88d9c3c4fb45096, type: 3}
 --- !u!114 &114537445326324580
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -35,6 +35,7 @@ public class GameLogic : MonoBehaviour
     //Alle Rampen in die Liste aufnehmen
     private void Start()
     {
+        AudioModell.instance.PlayAudio("music", 0.3f);
         toggelables = GameObject.FindGameObjectsWithTag("UpRamp");
         phaseTwoTriggered = false;
         gamePaused = false;
