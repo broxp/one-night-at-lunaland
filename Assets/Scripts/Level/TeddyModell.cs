@@ -152,8 +152,8 @@ public class TeddyModell : MonoBehaviour {
         AudioModell.instance.PlayAudio("match");
     }
 
-    private void OnDestroy()
-    {
-        UberManager.instance.hp = hp;
-    }
+    //private void OnDestroy()
+    //{
+    //    UberManager.instance.hp = hp;
+    //}
 }
