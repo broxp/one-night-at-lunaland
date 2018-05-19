@@ -25,7 +25,7 @@ public class TeddyModell : MonoBehaviour {
         {
             if(safe || hp <= 0)
             {
-                GameLogic.instance.LoadLevel();
+                //GameLogic.instance.LoadLevel();
             }
             else
             {
