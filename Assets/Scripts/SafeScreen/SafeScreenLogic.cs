@@ -11,10 +11,10 @@ public class SafeScreenLogic : MonoBehaviour {
 		if(VoiceClipAtLevelStart != "")
         {
             AudioModell.instance.PlayAudio(VoiceClipAtLevelStart);
-            if(playMusic)
-            {
-                AudioModell.instance.PlayAudio("music", 0.3f);
-            }
         }
-	}
+        if (playMusic)
+        {
+            AudioModell.instance.PlayAudio("music", 0.3f);
+        }
+    }
 }

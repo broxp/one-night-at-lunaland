@@ -842,7 +842,7 @@ Prefab:
     - target: {fileID: 114395897131063692, guid: a6decaee14e18a842943139c9a26d1c1,
         type: 2}
       propertyPath: audioEvents.Array.size
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114395897131063692, guid: a6decaee14e18a842943139c9a26d1c1,
         type: 2}
@@ -969,6 +969,16 @@ Prefab:
       propertyPath: audioEvents.Array.data[8].audioSources.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 37daa71ba016842d58b1264cfc5412af, type: 3}
+    - target: {fileID: 114395897131063692, guid: a6decaee14e18a842943139c9a26d1c1,
+        type: 2}
+      propertyPath: audioEvents.Array.data[9].name
+      value: music
+      objectReference: {fileID: 0}
+    - target: {fileID: 114395897131063692, guid: a6decaee14e18a842943139c9a26d1c1,
+        type: 2}
+      propertyPath: audioEvents.Array.data[9].audioSources.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 97d3991d1a0fe404698fc1479bba3c23, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6decaee14e18a842943139c9a26d1c1, type: 2}
   m_IsPrefabParent: 0
