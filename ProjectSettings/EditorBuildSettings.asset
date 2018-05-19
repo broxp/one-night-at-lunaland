@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TutorialWalkmitTik.unity
     guid: 4abd3c042aa344fad8e08da9ccabb4a5
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 2054e792d9277e54a9e546b284655924
   m_configObjects: {}
