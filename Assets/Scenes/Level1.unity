@@ -812,8 +812,8 @@ MonoBehaviour:
   safety: 11
   maxSafety: 11
   safetyDelta: -1
-  phaseTwoThreshold: 6
-  phaseTwoRepelThreshold: 2
+  phaseTwoThreshold: 5
+  phaseTwoRepelThreshold: 5
   charactersOffset: 0.5
   ammo: 0
   toggelables: []
