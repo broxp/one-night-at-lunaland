@@ -5,8 +5,6 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class SafeScreenController : MonoBehaviour {
 
-    public bool kickingPossible = false;
-
     float xInput, yInput;
     SafeScreenModell safeScreenModell;
     SafeScreenView safeScreenView;
@@ -21,14 +19,6 @@ public class SafeScreenController : MonoBehaviour {
     {
 		xInput = CrossPlatformInputManager.GetAxis("Horizontal");
         yInput = CrossPlatformInputManager.GetAxis("Vertical");
-
-        if(kickingPossible)
-        {
-            if(Input.GetButtonDown("Fire1"))
-            {
-                safeScreenView.isKicking = true;
-            }
-        }
     }
 
     private void FixedUpdate()
@@ -36,5 +26,10 @@ public class SafeScreenController : MonoBehaviour {
         safeScreenModell.Move(xInput, yInput);
         safeScreenView.input.x = xInput;
         safeScreenView.input.y = yInput;
+    }
+
+    public void Kick()
+    {
+        safeScreenView.isKicking = true;
     }
 }

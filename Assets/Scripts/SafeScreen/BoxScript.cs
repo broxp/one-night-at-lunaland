@@ -37,7 +37,6 @@ public class BoxScript : MonoBehaviour {
                 break;
             case 3:
                 AudioModell.instance.PlayAudio("kick");
-                _safeScreenModell.OnTriggerExit2D(null);
                 key.SetActive(true);
                 Destroy(this.gameObject);
 

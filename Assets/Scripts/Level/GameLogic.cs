@@ -39,7 +39,10 @@ public class GameLogic : MonoBehaviour
         toggelables = GameObject.FindGameObjectsWithTag("UpRamp");
         phaseTwoTriggered = false;
         gamePaused = false;
-        //ammo = UberManager.instance.matches;
+        if (UberManager.instance != null)
+        {
+            ammo = UberManager.instance.matches;
+        }
     }
 
     void Update ()
@@ -128,10 +131,13 @@ public class GameLogic : MonoBehaviour
     }
 
     //Save Match amount
-    //private void OnDestroy()
-    //{
-    //    UberManager.instance.matches = ammo;
-    //}
+    private void OnDestroy()
+    {
+        if(UberManager.instance != null)
+        {
+            UberManager.instance.matches = ammo;
+        }
+    }
 
     //CanvasView aktualisieren
     void UpdateCanvasView()

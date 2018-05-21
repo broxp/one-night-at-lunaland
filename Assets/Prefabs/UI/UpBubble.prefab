@@ -145,8 +145,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114680152854360074, guid: b059e01508ece06428e1942747c1f054,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: GoUp
         m_Mode: 1
         m_Arguments:
@@ -179,7 +178,7 @@ RectTransform:
   m_GameObject: {fileID: 1342081550268166}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 224590348497459198}
   m_Father: {fileID: 0}

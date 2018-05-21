@@ -1606,7 +1606,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1059281729765356, guid: 364a60f7f8472ab41b17d4fd3c7a5ecd, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 364a60f7f8472ab41b17d4fd3c7a5ecd, type: 2}
@@ -1722,7 +1722,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1059281729765356, guid: 364a60f7f8472ab41b17d4fd3c7a5ecd, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 364a60f7f8472ab41b17d4fd3c7a5ecd, type: 2}
@@ -2258,7 +2258,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1059281729765356, guid: 364a60f7f8472ab41b17d4fd3c7a5ecd, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 364a60f7f8472ab41b17d4fd3c7a5ecd, type: 2}
@@ -2323,6 +2323,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4233554298869544, guid: 364a60f7f8472ab41b17d4fd3c7a5ecd,
     type: 2}
   m_PrefabInternal: {fileID: 1299763894}
+--- !u!1 &1313430352 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1106304994420216, guid: 3c4b5dbe15509264fa0f59f5cedf52f5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1755524842}
 --- !u!1001 &1370308921
 Prefab:
   m_ObjectHideFlags: 0
@@ -3242,7 +3247,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1339539951745966, guid: a6decaee14e18a842943139c9a26d1c1, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114395897131063692, guid: a6decaee14e18a842943139c9a26d1c1,
         type: 2}
@@ -3472,7 +3477,7 @@ Prefab:
         type: 2}
       propertyPath: luna
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1313430352}
     - target: {fileID: 114678226592544032, guid: 9e6464cc75737e84da3825cf846e0486,
         type: 2}
       propertyPath: maxSafety
@@ -3612,7 +3617,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2098786662}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 152.48676, y: 14.708118, z: -1.5}
+  m_LocalPosition: {x: 152.48676, y: 14.708118, z: -2.82}
   m_LocalScale: {x: 1.85, y: 1.85, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

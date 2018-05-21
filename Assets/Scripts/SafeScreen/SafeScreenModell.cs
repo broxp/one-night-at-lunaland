@@ -30,16 +30,10 @@ public class SafeScreenModell : MonoBehaviour {
         minYPosition = minYPositionTransform.position.y;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         box = collision.gameObject;
-        safeScreenController.kickingPossible = true;
-    }
-
-    public void OnTriggerExit2D(Collider2D collision)
-    {
-        safeScreenController.kickingPossible = false;
-        box = null;
+        safeScreenController.Kick();
     }
 
     public void KickBox()
