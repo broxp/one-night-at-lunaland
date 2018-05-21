@@ -46,15 +46,8 @@ public class LunaView : MonoBehaviour
         {
             Spine.Animation transition = null;
 
-            if (transition != null)
-            {
-                skeletonAnimation.AnimationState.SetAnimation(0, transition, false).MixDuration = 0.05f;
-                skeletonAnimation.AnimationState.AddAnimation(0, targetAnimation, true, 0f);
-            }
-            else
-            {
                 skeletonAnimation.AnimationState.SetAnimation(0, targetAnimation, true);
-            }
+           
         }
         previousTargetAnimation = targetAnimation;
 
