@@ -1680,6 +1680,11 @@ Prefab:
       propertyPath: teddy
       value: 
       objectReference: {fileID: 587574814}
+    - target: {fileID: 114641257456754758, guid: da8c1bcce8e234c81a833db4efc394ee,
+        type: 2}
+      propertyPath: maxSafety
+      value: 37.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: da8c1bcce8e234c81a833db4efc394ee, type: 2}
   m_IsPrefabParent: 0
