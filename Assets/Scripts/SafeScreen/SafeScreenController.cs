@@ -17,8 +17,16 @@ public class SafeScreenController : MonoBehaviour {
 	
 	void Update ()
     {
-		xInput = CrossPlatformInputManager.GetAxis("Horizontal");
-        yInput = CrossPlatformInputManager.GetAxis("Vertical");
+        if(!safeScreenView.isKicking)
+        {
+            xInput = CrossPlatformInputManager.GetAxis("Horizontal");
+            yInput = CrossPlatformInputManager.GetAxis("Vertical");
+        }
+        else
+        {
+            xInput = 0;
+            yInput = 0;
+        }
     }
 
     private void FixedUpdate()

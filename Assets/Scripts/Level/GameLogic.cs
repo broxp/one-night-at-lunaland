@@ -110,6 +110,7 @@ public class GameLogic : MonoBehaviour
             print("light!");
             ammo--;
             AudioModell.instance.PlayAudio("match");
+            phaseTwoTriggered = false;
 
             if (safety <= phaseTwoRepelThreshold)
             {
