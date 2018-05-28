@@ -34,6 +34,9 @@ public class AudioModell : MonoBehaviour {
                 _audioSource.clip = audioEvents[i].GetClip();
                 _audioSource.Play();
                 _audioSource.volume = _volume;
+                if(PauseMenu.GamePaused){
+                    _audioSource.volume *= 0.5f;
+                }
 
                 if (_isLoop)
                 {
