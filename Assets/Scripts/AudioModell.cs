@@ -24,7 +24,7 @@ public class AudioModell : MonoBehaviour {
         }
     }
 
-    public void PlayAudio(string _name, float _volume = 1)
+    public void PlayAudio(string _name, float _volume = 1, bool _isLoop = false)
     {
         for (int i = 0; i <= audioEvents.Length; i++)
         {
@@ -34,7 +34,15 @@ public class AudioModell : MonoBehaviour {
                 _audioSource.clip = audioEvents[i].GetClip();
                 _audioSource.Play();
                 _audioSource.volume = _volume;
-                Destroy(_audioSource, _audioSource.clip.length);
+
+                if (_isLoop)
+                {
+                    _audioSource.loop = true;
+                }
+                else
+                {
+                    Destroy(_audioSource, _audioSource.clip.length);
+                }
                 return;
             }
         }

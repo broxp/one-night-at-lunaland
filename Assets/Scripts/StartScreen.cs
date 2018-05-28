@@ -90,7 +90,7 @@ public class StartScreen : MonoBehaviour
             
         }
         Vector3 _mouthPos = mouth.transform.position;
-        //_mouthPos.y = y0 - BandVol(frqLow, frqHigh) * volume;
+        _mouthPos.y = y0 - BandVol(frqLow, frqHigh) * volume;
         _mouthPos.z = mouth.transform.position.z;
         mouth.transform.position = Vector3.Lerp(_mouthPos, mouth.transform.position, 0.1f);
         //mouth.transform.position += (_mouthPos - mouth.transform.position) * Time.deltaTime * mouthMoveSpeed;

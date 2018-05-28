@@ -617,8 +617,9 @@ MonoBehaviour:
   lightaura: {fileID: 1193406183}
   sounds:
   - {fileID: 8300000, guid: 08ca049a4d7cede4b974086c2468eb08, type: 3}
-  volume: 50
+  volume: 300
   nextScene: Save1
+  mouthMoveSpeed: 1.77
 --- !u!4 &867650079
 Transform:
   m_ObjectHideFlags: 0
