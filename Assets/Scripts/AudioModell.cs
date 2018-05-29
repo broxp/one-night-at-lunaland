@@ -59,7 +59,7 @@ public class AudioEvent
     //[Range(0f, 1f)]
     //public float triggerChance = 1f;
     public string name;
-    
+
     [SerializeField]
     private AudioClip[] audioSources;
 

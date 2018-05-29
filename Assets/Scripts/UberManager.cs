@@ -23,6 +23,16 @@ public class UberManager : MonoBehaviour {
         }
     }
 
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        AudioGameModell.instance.EndLowImportanceClips();
+    }
+
     private void Update()
     {
         if(Input.GetButton("Skip"))
