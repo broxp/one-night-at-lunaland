@@ -40,8 +40,13 @@ namespace Spine.Unity.Examples {
 		public Vector3 max;
 		public float smoothing = 5f;
 
-		// Update is called once per frame
-		void LateUpdate () {
+        private void Start()
+        {
+            target = GameObject.FindGameObjectWithTag("Player").transform;
+        }
+
+        // Update is called once per frame
+        void LateUpdate () {
 			Vector3 goalPoint = target.position + offset;
 			goalPoint.x = Mathf.Clamp(goalPoint.x, min.x, max.x);
 			goalPoint.y = Mathf.Clamp(goalPoint.y, min.y, max.y);

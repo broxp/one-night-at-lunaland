@@ -2,29 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class AudioLibraryModell : MonoBehaviour {
 
-    public List<AudioObject> audioObjects = new List<AudioObject>();
-    public AudioLibraryModell instance = null;
+    [SerializeField]
+    public AudioObject[] audioObjects;
 
-    void Awake()
+    private void OnEnable()
     {
-
-        if (instance == null)
+        foreach (AudioObject _audioObject in audioObjects)
         {
-            instance = this;
-            DontDestroyOnLoad(this.gameObject);
+            AudioGameModell.instance.audioLibrary.Add(_audioObject);
         }
-
-        else if (instance != this)
-        {
-            instance.audioObjects.AddRange(audioObjects);
-            Destroy(gameObject);
-        }
-    }
-
-    private void Start()
-    {
-        AudioGameModell.instance.audioLibrary = audioObjects;
     }
 }

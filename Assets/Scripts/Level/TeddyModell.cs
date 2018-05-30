@@ -21,16 +21,16 @@ public class TeddyModell : MonoBehaviour {
     {
         UpdateCanvasView();
 
-        if (GameLogic.instance.safety <= 0)
+        if (LevelManager.instance.safety <= 0)
         {
             if(safe || hp <= 0)
             {
-                GameLogic.instance.ammo = 1;
-                GameLogic.instance.LoadLevel();
+                LevelManager.instance.ammo = 1;
+                LevelManager.instance.LoadLevel();
             }
             else
             {
-                hp -= GameLogic.instance.monsterDmg * Time.deltaTime;
+                hp -= LevelManager.instance.monsterDmg * Time.deltaTime;
             }
         }
     }
@@ -49,12 +49,12 @@ public class TeddyModell : MonoBehaviour {
         {
             print("crossing");
             CanvasView.instance.ShowCrossingBubble();
-            GameLogic.instance.gamePaused = true;
+            LevelManager.instance.gamePaused = true;
         }
 
         if(collision.gameObject.tag == "UpRamp")
         {
-            GameLogic.instance.DeactivateUpWays();
+            LevelManager.instance.DeactivateUpWays();
         }
 
         if (collision.gameObject.tag == "Luna")
@@ -93,18 +93,18 @@ public class TeddyModell : MonoBehaviour {
     public void GoUp()
     {
         print("up!");
-        GameLogic.instance.gamePaused = false;
-        GameLogic.instance.ActivateUpWays();
+        LevelManager.instance.gamePaused = false;
+        LevelManager.instance.ActivateUpWays();
         CanvasView.instance.ClearBubbles();
-        //AudioModell.instance.PlayAudio("suffering");
+        //AudioGameModell.instance.PlayAudio("suffering");
     }
 
     //Nach unten gehen
     public void GoDown()
     {
         print("down!");
-        GameLogic.instance.gamePaused = false;
-        GameLogic.instance.DeactivateUpWays();
+        LevelManager.instance.gamePaused = false;
+        LevelManager.instance.DeactivateUpWays();
         CanvasView.instance.ClearBubbles();
     }
 
@@ -129,16 +129,16 @@ public class TeddyModell : MonoBehaviour {
     {
         print("back!");
 
-        //AudioModell.instance.PlayAudio("happy");
+        //AudioGameModell.instance.PlayAudio("happy");
 
         //Munition übergeben
-        GameLogic.instance.ammo += ammoCarriedByTeddy;
+        LevelManager.instance.ammo += ammoCarriedByTeddy;
         ammoCarriedByTeddy = 0;
 
         //Timer auf Phase 2 resetten
-        if(GameLogic.instance.safety < GameLogic.instance.phaseTwoThreshold)
+        if(LevelManager.instance.safety < LevelManager.instance.phaseTwoThreshold)
         {
-            GameLogic.instance.safety = GameLogic.instance.phaseTwoThreshold;
+            LevelManager.instance.safety = LevelManager.instance.phaseTwoThreshold;
         }
 
         //Sicherer Status für Teddy
@@ -149,12 +149,11 @@ public class TeddyModell : MonoBehaviour {
     //Monster abwehren
     public void ActivateLight()
     {
-        GameLogic.instance.RepelMonster();
-        AudioModell.instance.PlayAudio("match");
+        LevelManager.instance.RepelMonster();
     }
 
     //private void OnDestroy()
     //{
-    //    UberManager.instance.hp = hp;
+    //    GameManager.instance.hp = hp;
     //}
 }

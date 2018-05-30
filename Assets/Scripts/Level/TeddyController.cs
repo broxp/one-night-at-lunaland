@@ -42,7 +42,7 @@ public class TeddyController : MonoBehaviour {
         bool crouch = Input.GetKey(KeyCode.LeftControl);
         float h = CrossPlatformInputManager.GetAxis("Horizontal");
 
-        if (GameLogic.instance.gamePaused)
+        if (LevelManager.instance.gamePaused)
         {
             crouch = false;
             h = 0;

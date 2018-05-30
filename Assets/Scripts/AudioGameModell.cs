@@ -5,9 +5,9 @@ using UnityEngine;
 [System.Serializable]
 public class AudioGameModell : MonoBehaviour
 {
+    [HideInInspector]
     public List<AudioObject> audioLibrary = new List<AudioObject>();
     public static AudioGameModell instance = null;
-    public AudioGroup[] audioGroups;
 
     List<AudioObject> audioObjectsPlaying = new List<AudioObject>();
 
@@ -16,7 +16,6 @@ public class AudioGameModell : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(this.gameObject);
         }
 
         else if (instance != this)
@@ -25,7 +24,19 @@ public class AudioGameModell : MonoBehaviour
         }
     }
 
-
+    public void StopAudio(string _name)
+    {
+        foreach(AudioObject _audioObject in audioObjectsPlaying)
+        {
+            if(_audioObject.name == _name)
+            {
+                Destroy(_audioObject.audioSourcePlayingOn);
+                audioObjectsPlaying.Remove(_audioObject);
+                return;
+            }
+        }
+        print("no such audio-event with name " + _name + " found.");
+    }
 
     public void PlayAudio(string _name, float _volume = 1, bool _isLoop = false)
     {
@@ -33,7 +44,7 @@ public class AudioGameModell : MonoBehaviour
 
         if (_audioObject == null)
         {
-            print("no such audio-event found");
+            print("no such audio-event with name " + _name + " found.");
             return;
         }
 
@@ -46,13 +57,17 @@ public class AudioGameModell : MonoBehaviour
         {
             List<AudioObject> audioObjectsPlayingInGroup = AudioObjectsInAudioGroup(_audioObject.audioGroup, audioObjectsPlaying);
 
+            if(audioObjectsPlayingInGroup.Count == 0)
+            {
+                StartCoroutine(InitializeAudioSource(_audioObject));
+            }
+
             foreach (AudioObject _otherAudioObject in audioObjectsPlayingInGroup)
             {
                 if(_otherAudioObject.importance <= _audioObject.importance)
                 {
                     StartCoroutine(InitializeAudioSource(_audioObject));
-                    Destroy(_otherAudioObject.audioSourcePlayingOn);
-                    audioObjectsPlaying.Remove(_otherAudioObject);
+                    StopAudio(_otherAudioObject.name);
                     return;
                 }
             }
@@ -61,14 +76,13 @@ public class AudioGameModell : MonoBehaviour
 
     AudioObject AudioObjectByName(string _name, List<AudioObject> _list)
     {
-        for (int i = 0; i <= _list.Count; i++)
+        for (int i = 0; i < _list.Count; i++)
         {
             if (_list[i].name == _name)
             {
                 return _list[i];
             }
         }
-        print("AudioObject not found");
         return null;
     }
 
@@ -76,24 +90,24 @@ public class AudioGameModell : MonoBehaviour
     {
         List<AudioObject> _audioObjects = new List<AudioObject>();
 
-        for (int i = 0; i <= _list.Count; i++)
+        for (int i = 0; i < _list.Count; i++)
         {
-            if (_list[i].audioGroup == _group)
+            if (_list[i].audioGroup.name == _group.name)
             {
                 _audioObjects.Add(_list[i]);
             }
         }
-
         return _audioObjects;
     }
 
     IEnumerator InitializeAudioSource(AudioObject _audioObject)
     {
         AudioSource _audioSource = gameObject.AddComponent<AudioSource>() as AudioSource;
+        audioObjectsPlaying.Add(_audioObject);
         _audioObject.audioSourcePlayingOn = _audioSource;
         _audioSource.clip = _audioObject.audioClip;
-        _audioSource.Play();
         _audioSource.volume = _audioObject.volume;
+        _audioSource.Play();
 
         if (_audioObject.loop)
         {
@@ -103,7 +117,6 @@ public class AudioGameModell : MonoBehaviour
         {
             yield return new WaitForSeconds(_audioSource.clip.length);
             Destroy(_audioSource);
-
         }
     }
 
@@ -111,10 +124,9 @@ public class AudioGameModell : MonoBehaviour
     {
         foreach (AudioObject _audioObject in audioObjectsPlaying)
         {
-            if (_audioObject.importance < 3)
+            if (_audioObject.importance < 2)
             {
-                Destroy(_audioObject.audioSourcePlayingOn);
-                audioObjectsPlaying.Remove(_audioObject);
+                StopAudio(_audioObject.name);
             }
         }
     }
@@ -133,20 +145,6 @@ public class AudioGameModell : MonoBehaviour
     //}
 }
 
-public class AudioObject
-{
-    public string name;
-    [RangeAttribute(1, 3)]
-    public int importance;
-    public AudioGroup audioGroup;
-    public AudioClip audioClip;
-    public float volume = 1f;
-    public bool loop = false;
-    public AudioSource audioSourcePlayingOn;
-}
 
-public class AudioGroup
-{
-    public string name;
-    public bool multipleClipsPossible = true;
-}
+
+
