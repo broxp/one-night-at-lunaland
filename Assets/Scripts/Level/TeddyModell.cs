@@ -7,7 +7,9 @@ public class TeddyModell : MonoBehaviour {
 
     public int ammoCarriedByTeddy;
     public float hp, movementForce;
-    public bool safe;
+    public bool safe = true;
+
+    bool sufferingAudioPlaying = false;
 
     Rigidbody2D rigidbody;
 
@@ -31,6 +33,11 @@ public class TeddyModell : MonoBehaviour {
             else
             {
                 hp -= LevelManager.instance.monsterDmg * Time.deltaTime;
+                if (!sufferingAudioPlaying)
+                {
+                    AudioGameModell.instance.PlayAudio("TeddySuffering");
+                    sufferingAudioPlaying = true;
+                }
             }
         }
     }
@@ -139,6 +146,8 @@ public class TeddyModell : MonoBehaviour {
         if(LevelManager.instance.safety < LevelManager.instance.phaseTwoThreshold)
         {
             LevelManager.instance.safety = LevelManager.instance.phaseTwoThreshold;
+            AudioGameModell.instance.StopAudio("TeddySuffering");
+            sufferingAudioPlaying = false;
         }
 
         //Sicherer Status für Teddy
@@ -149,7 +158,7 @@ public class TeddyModell : MonoBehaviour {
     //Monster abwehren
     public void ActivateLight()
     {
-        LevelManager.instance.RepelMonster();
+        LevelManager.instance.RepelMonster(safe);
     }
 
     //private void OnDestroy()

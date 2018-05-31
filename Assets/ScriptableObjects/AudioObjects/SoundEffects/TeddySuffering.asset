@@ -11,9 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69284c2a7b79b8d4da7cdad7bdcfe359, type: 3}
   m_Name: TeddySuffering
   m_EditorClassIdentifier: 
+  volume: 1
   importance: 0
   audioGroup: {fileID: 11400000, guid: 67908395198a2eb4d93d6dde6137e7be, type: 2}
   audioClip: {fileID: 8300000, guid: a4ec1e0f402d63047a8bd5a871a1f21e, type: 3}
-  volume: 1
-  loop: 0
+  loop: 1
   audioSourcePlayingOn: {fileID: 0}

@@ -15,6 +15,7 @@ TagManager:
   - MinY
   - MaxY
   - box
+  - AudioLibrary
   layers:
   - Default
   - TransparentFX

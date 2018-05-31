@@ -120,15 +120,28 @@ public class AudioGameModell : MonoBehaviour
         }
     }
 
-    public void EndLowImportanceClips()
+    public void EndOfSceneCleanup()
     {
-        foreach (AudioObject _audioObject in audioObjectsPlaying)
+        UnloadLibrary();
+        EndLowImportanceClips();
+    }
+
+    void EndLowImportanceClips()
+    {
+        List<AudioObject> _tmp = new List<AudioObject>(audioObjectsPlaying);
+
+        foreach (AudioObject _audioObject in _tmp)
         {
             if (_audioObject.importance < 2)
             {
                 StopAudio(_audioObject.name);
             }
         }
+    }
+
+    void UnloadLibrary()
+    {
+        audioLibrary.Clear();
     }
 
     //int SearchListIndexForObject<T>(ref T _object, List<T> _list)

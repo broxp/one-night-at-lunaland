@@ -8,7 +8,7 @@ public class AudioLibraryModell : MonoBehaviour {
     [SerializeField]
     public AudioObject[] audioObjects;
 
-    private void OnEnable()
+    public void LoadLibraryIntoManager()
     {
         foreach (AudioObject _audioObject in audioObjects)
         {

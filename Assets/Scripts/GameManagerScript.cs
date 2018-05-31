@@ -30,7 +30,8 @@ public class GameManagerScript : MonoBehaviour {
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        AudioGameModell.instance.EndLowImportanceClips();
+        AudioGameModell.instance.EndOfSceneCleanup();
+        LoadAudioLibraries();    
     }
 
     private void Update()
@@ -42,6 +43,14 @@ public class GameManagerScript : MonoBehaviour {
         if(Input.GetButtonDown("Last"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        }
+    }
+
+    void LoadAudioLibraries()
+    {
+        foreach (GameObject _gameObject in GameObject.FindGameObjectsWithTag("AudioLibrary"))
+        {
+            _gameObject.GetComponent<AudioLibraryModell>().LoadLibraryIntoManager();
         }
     }
 }

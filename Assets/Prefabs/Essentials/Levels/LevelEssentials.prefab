@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 114007842131648252}
   m_Layer: 0
   m_Name: AudioLibraryLevelBase
-  m_TagString: Untagged
+  m_TagString: AudioLibrary
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -639,15 +639,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25efa1cb85314124cb8e041ec77f9928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterDmg: 1
   safety: 25
   maxSafety: 25
-  safetyDelta: -1
   phaseTwoThreshold: 5
-  phaseTwoRepelThreshold: 2
+  phaseTwoRepelThreshold: 5
   charactersOffset: -0.48
   ammo: 1
   toggelables: []
+  monsterDmg: 1
   gamePaused: 0
 --- !u!114 &114662517681698066
 MonoBehaviour:

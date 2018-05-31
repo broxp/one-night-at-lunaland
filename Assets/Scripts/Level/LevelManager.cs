@@ -17,7 +17,7 @@ public class LevelManager : MonoBehaviour
     public float monsterDmg;
     public bool gamePaused;
 
-    float safetyDelta;
+    float safetyDelta = -1;
     GameObject luna, teddy;
     private bool phaseTwoTriggered;
 
@@ -39,10 +39,11 @@ public class LevelManager : MonoBehaviour
     //Alle Rampen in die Liste aufnehmen
     private void Start()
     {
-        AudioGameModell.instance.PlayAudio("LevelMusic", 0.3f);
+        
         toggelables = GameObject.FindGameObjectsWithTag("UpRamp");
         luna = GameObject.FindGameObjectWithTag("Luna");
         teddy = GameObject.FindGameObjectWithTag("Player");
+        AudioGameModell.instance.PlayAudio("LevelMusic", 0.3f);
         phaseTwoTriggered = false;
         gamePaused = false;
         if (GameManagerScript.instance != null)
@@ -109,7 +110,7 @@ public class LevelManager : MonoBehaviour
     }
 
     //Monster Abwehren
-    public void RepelMonster()
+    public void RepelMonster(bool _safe)
     {
         if (ammo > 0)
         {
@@ -118,23 +119,30 @@ public class LevelManager : MonoBehaviour
             AudioGameModell.instance.PlayAudio("Match");
             phaseTwoTriggered = false;
 
-            if (safety <= phaseTwoRepelThreshold)
+            if(_safe)
             {
-                safety = maxSafety;
-                AudioGameModell.instance.PlayAudio("MonsterRepelled");
-                AudioGameModell.instance.StopAudio("MonsterBreath");
+                if (safety <= phaseTwoRepelThreshold)
+                {
+                    safety = maxSafety;
+                    AudioGameModell.instance.PlayAudio("MonsterRepelled");
+                    AudioGameModell.instance.StopAudio("MonsterBreath");
+                }
+                else if (phaseTwoRepelThreshold <= safety && safety <= phaseTwoThreshold)
+                {
+                    safety = phaseTwoThreshold;
+                    AudioGameModell.instance.PlayAudio("MonsterAnnoyed");
+                    AudioGameModell.instance.StopAudio("MonsterBreath");
+                }
+
+                else if (safety > phaseTwoThreshold)
+                {
+                    //UNNÖTIG GEZÜNDETES STREICHHOLZ IN GEGENWART VON TEDDY GEZÜNDET
+                }
             }
-            else if (phaseTwoRepelThreshold <= safety && safety <= phaseTwoThreshold)
+            else
             {
-                safety = phaseTwoThreshold;
-                AudioGameModell.instance.PlayAudio("MonsterAnnoyed");
-                AudioGameModell.instance.StopAudio("MonsterBreath");
+                //TEDDY WAR NICHT IN DER NÄHE
             }
-            else if (safety > phaseTwoThreshold)
-            {
-                //UNNÖTIG GEZÜNDETES STREICHHOLZ
-            }
-                
         }
         else
         {
