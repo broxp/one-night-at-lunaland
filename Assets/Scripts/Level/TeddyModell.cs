@@ -27,8 +27,7 @@ public class TeddyModell : MonoBehaviour {
         {
             if(safe || hp <= 0)
             {
-                LevelManager.instance.ammo = 1;
-                LevelManager.instance.LoadLevel();
+                LevelManager.instance.RestartGame();
             }
             else
             {

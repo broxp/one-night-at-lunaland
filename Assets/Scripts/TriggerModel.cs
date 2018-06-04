@@ -11,12 +11,13 @@ public class TriggerModel : MonoBehaviour {
     public EventType eventType;
     public string EventName;
     public GameObject toggleObject;
+    public float volume = 1;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(eventType == EventType.Audio)
         {
-            AudioModell.instance.PlayAudio(EventName);
+            AudioModell.instance.PlayAudio(EventName, volume);
             Destroy(this.gameObject);
         }
         else if(eventType == EventType.Scene)

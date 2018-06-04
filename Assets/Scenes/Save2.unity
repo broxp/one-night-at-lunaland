@@ -238,111 +238,6 @@ MonoBehaviour:
   lookAheadFactor: 3
   lookAheadReturnSpeed: 0.5
   lookAheadMoveThreshold: 0.1
---- !u!1001 &128347497
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 224683993002717116, guid: 8c78bc0984c3a4ee2b1431fe7a4c7862,
-        type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224683993002717116, guid: 8c78bc0984c3a4ee2b1431fe7a4c7862,
-        type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224683993002717116, guid: 8c78bc0984c3a4ee2b1431fe7a4c7862,
-        type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224683993002717116, guid: 8c78bc0984c3a4ee2b1431fe7a4c7862,
-        type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224683993002717116, guid: 8c78bc0984c3a4ee2b1431fe7a4c7862,
-        type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224683993002717116, guid: 8c78bc0984c3a4ee2b1431fe7a4c7862,
-        type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224683993002717116, guid: 8c78bc0984c3a4ee2b1431fe7a4c7862,
-        type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224683993002717116, guid: 8c78bc0984c3a4ee2b1431fe7a4c7862,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 224683993002717116, guid: 8c78bc0984c3a4ee2b1431fe7a4c7862,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224683993002717116, guid: 8c78bc0984c3a4ee2b1431fe7a4c7862,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224683993002717116, guid: 8c78bc0984c3a4ee2b1431fe7a4c7862,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224683993002717116, guid: 8c78bc0984c3a4ee2b1431fe7a4c7862,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224683993002717116, guid: 8c78bc0984c3a4ee2b1431fe7a4c7862,
-        type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224683993002717116, guid: 8c78bc0984c3a4ee2b1431fe7a4c7862,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224683993002717116, guid: 8c78bc0984c3a4ee2b1431fe7a4c7862,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224683993002717116, guid: 8c78bc0984c3a4ee2b1431fe7a4c7862,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224683993002717116, guid: 8c78bc0984c3a4ee2b1431fe7a4c7862,
-        type: 2}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224683993002717116, guid: 8c78bc0984c3a4ee2b1431fe7a4c7862,
-        type: 2}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 223131887661146092, guid: 8c78bc0984c3a4ee2b1431fe7a4c7862,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 108773732}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 8c78bc0984c3a4ee2b1431fe7a4c7862, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &232355563
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,7 +250,6 @@ GameObject:
   - component: {fileID: 232355567}
   - component: {fileID: 232355566}
   - component: {fileID: 232355568}
-  - component: {fileID: 232355565}
   m_Layer: 9
   m_Name: TriggerExitAudio
   m_TagString: Untagged
@@ -372,26 +266,11 @@ Transform:
   m_GameObject: {fileID: 232355563}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.693803, y: 1.06, z: 0}
-  m_LocalScale: {x: 1.3540459, y: 1.3540455, z: 1.3540455}
+  m_LocalScale: {x: 1.0693529, y: 1.0693523, z: 1.0693523}
   m_Children: []
   m_Father: {fileID: 87591448}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &232355565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114827755525655948, guid: 4afda89e43712e04389231a2a27aa2a0,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 232355563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 827d1549d73b4314ca8d81b8d918be20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventType: 0
-  EventName: Exit
-  toggleObject: {fileID: 0}
 --- !u!58 &232355566
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -466,8 +345,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventType: 0
-  EventName: rattle
+  EventName: Exit
   toggleObject: {fileID: 0}
+  volume: 1
 --- !u!1 &653161539 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1282193941823386, guid: 8a83bae300819ea479d764cc09f2b845,
@@ -528,7 +408,7 @@ Prefab:
     - target: {fileID: 114827755525655948, guid: 4afda89e43712e04389231a2a27aa2a0,
         type: 2}
       propertyPath: EventName
-      value: Tik
+      value: tik
       objectReference: {fileID: 0}
     - target: {fileID: 4339385435428604, guid: 4afda89e43712e04389231a2a27aa2a0, type: 2}
       propertyPath: m_LocalScale.x
@@ -550,6 +430,11 @@ Prefab:
         type: 2}
       propertyPath: toggleObject
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114827755525655948, guid: 4afda89e43712e04389231a2a27aa2a0,
+        type: 2}
+      propertyPath: volume
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4afda89e43712e04389231a2a27aa2a0, type: 2}
@@ -643,11 +528,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4369937362847992, guid: bfe352d900d15464bb9c15830da4a7aa, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 7.4
+      value: 6.15
       objectReference: {fileID: 0}
     - target: {fileID: 4369937362847992, guid: bfe352d900d15464bb9c15830da4a7aa, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.3
+      value: -3.53
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bfe352d900d15464bb9c15830da4a7aa, type: 2}
@@ -795,6 +680,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.5387604
       objectReference: {fileID: 0}
+    - target: {fileID: 114827755525655948, guid: 4afda89e43712e04389231a2a27aa2a0,
+        type: 2}
+      propertyPath: volume
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4afda89e43712e04389231a2a27aa2a0, type: 2}
   m_IsPrefabParent: 0
@@ -847,6 +737,7 @@ MonoBehaviour:
   eventType: 0
   EventName: key
   toggleObject: {fileID: 0}
+  volume: 0.3
 --- !u!114 &1235097738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -861,6 +752,7 @@ MonoBehaviour:
   eventType: 2
   EventName: 
   toggleObject: {fileID: 800415405}
+  volume: 0.3
 --- !u!58 &1235097739
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1420,11 +1312,11 @@ Prefab:
         type: 2}
       propertyPath: audioEvents.Array.data[0].audioSources.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 890cd8c4f33752d49b7776c41dc2bd4b, type: 3}
+      objectReference: {fileID: 8300000, guid: ead0d4de1f9a8194b850bbadea716bc3, type: 3}
     - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
       propertyPath: audioEvents.Array.data[1].name
-      value: Tik
+      value: tik
       objectReference: {fileID: 0}
     - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
@@ -1440,7 +1332,7 @@ Prefab:
         type: 2}
       propertyPath: audioEvents.Array.data[2].audioSources.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 3017cec11650fcb4bbe4a8914032ef09, type: 3}
+      objectReference: {fileID: 8300000, guid: 73f1f3513e14a87419e81c0a0a37eb32, type: 3}
     - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
       propertyPath: audioEvents.Array.data[3].name

@@ -16,6 +16,9 @@ public class LevelManager : MonoBehaviour
     [HideInInspector]
     public float monsterDmg;
     public bool gamePaused;
+    public GameObject gameOverScreen;
+    [HideInInspector]
+    public bool gameOver = false;
 
     float safetyDelta = -1;
     GameObject luna, teddy;
@@ -173,5 +176,12 @@ public class LevelManager : MonoBehaviour
     {
         AudioGameModell.instance.PlayAudio("MonsterBreath");
         phaseTwoTriggered = true;
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 0f;
+        gameOverScreen.SetActive(true);
+        gameOver = true;
     }
 }

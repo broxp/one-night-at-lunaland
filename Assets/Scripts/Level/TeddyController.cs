@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityStandardAssets.CrossPlatformInput;
 
 public class TeddyController : MonoBehaviour {
@@ -18,6 +19,15 @@ public class TeddyController : MonoBehaviour {
 
     private void Update()
     {
+        if(LevelManager.instance.gameOver == true)
+        {
+            if(Input.GetButtonDown("Repel"))
+            {
+                Time.timeScale = 1;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        }
+
         if(CrossPlatformInputManager.GetButtonDown("Repel"))
         {
             teddyModell.ActivateLight();
