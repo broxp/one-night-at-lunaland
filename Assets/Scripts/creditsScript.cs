@@ -11,5 +11,10 @@ public class creditsScript : MonoBehaviour {
         Vector2 _temp = gameObject.transform.position;
         _temp.y -= scrollSpeed * Time.deltaTime;
         gameObject.transform.position = _temp;
+
+        if(transform.position.y < -24.4)
+        {
+            Application.Quit();
+        }
     }
 }

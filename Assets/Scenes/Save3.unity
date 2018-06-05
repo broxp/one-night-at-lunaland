@@ -629,7 +629,7 @@ Prefab:
         type: 2}
       propertyPath: audioEvents.Array.data[1].audioSources.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 3017cec11650fcb4bbe4a8914032ef09, type: 3}
+      objectReference: {fileID: 8300000, guid: 73f1f3513e14a87419e81c0a0a37eb32, type: 3}
     - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
       propertyPath: audioEvents.Array.data[2].name
@@ -669,7 +669,7 @@ Prefab:
         type: 2}
       propertyPath: audioEvents.Array.data[5].audioSources.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 31f4abb566cffc74bb73b5aca9db2b0f, type: 3}
+      objectReference: {fileID: 8300000, guid: 6a02d3b8578c212428415ec260af645f, type: 3}
     - target: {fileID: 114309385389016294, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
       propertyPath: VoiceClipAtLevelStart
@@ -1758,6 +1758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventType: 2
   EventName: 
+  audioObject: {fileID: 0}
   toggleObject: {fileID: 1466494814}
   volume: 1
 --- !u!114 &2082584286
@@ -1773,6 +1774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventType: 0
   EventName: key
+  audioObject: {fileID: 0}
   toggleObject: {fileID: 0}
   volume: 1
 --- !u!114 &2082584290
@@ -1788,6 +1790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventType: 2
   EventName: 
+  audioObject: {fileID: 0}
   toggleObject: {fileID: 2122298960}
   volume: 1
 --- !u!1 &2122298960
@@ -1838,6 +1841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventType: 0
   EventName: door
+  audioObject: {fileID: 0}
   toggleObject: {fileID: 0}
   volume: 1
 --- !u!114 &2122298963
@@ -1853,6 +1857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventType: 0
   EventName: keydoor
+  audioObject: {fileID: 0}
   toggleObject: {fileID: 0}
   volume: 1
 --- !u!58 &2122298964

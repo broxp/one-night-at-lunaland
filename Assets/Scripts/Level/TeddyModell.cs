@@ -119,7 +119,8 @@ public class TeddyModell : MonoBehaviour {
     {
         print("picked up!");
         GameObject.Destroy(item);
-        ammoCarriedByTeddy++;
+        //ammoCarriedByTeddy++;
+        LevelManager.instance.ammo++;
         CanvasView.instance.ClearBubbles();
     }
 
@@ -144,7 +145,8 @@ public class TeddyModell : MonoBehaviour {
         //Timer auf Phase 2 resetten
         if(LevelManager.instance.safety < LevelManager.instance.phaseTwoThreshold)
         {
-            LevelManager.instance.safety = LevelManager.instance.phaseTwoThreshold;
+            LevelManager.instance.safety = LevelManager.instance.phaseTwoThreshold + 0.1f;
+            LevelManager.instance.ResetPhase2();
             AudioGameModell.instance.StopAudio("TeddySuffering");
             sufferingAudioPlaying = false;
         }

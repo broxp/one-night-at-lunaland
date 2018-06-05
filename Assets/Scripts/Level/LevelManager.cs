@@ -15,10 +15,12 @@ public class LevelManager : MonoBehaviour
     public GameObject[] toggelables;
     [HideInInspector]
     public float monsterDmg;
+    public float lightShrinkSpeed;
     public bool gamePaused;
     public GameObject gameOverScreen;
     [HideInInspector]
     public bool gameOver = false;
+    public GameObject lightContainer;
 
     float safetyDelta = -1;
     GameObject luna, teddy;
@@ -57,10 +59,14 @@ public class LevelManager : MonoBehaviour
 
     void Update ()
 	{
-        //UNTRIGGER PHASE TWO
-        if(safety <= phaseTwoThreshold && !phaseTwoTriggered)
+        if(safety <= phaseTwoThreshold)
         {
-            MonsterPhase2();
+            if(!phaseTwoTriggered)
+            {
+                MonsterPhase2();
+            }
+
+            ShrinkLight();
         }
 
         safety += Time.deltaTime * safetyDelta;
@@ -120,7 +126,8 @@ public class LevelManager : MonoBehaviour
             print("light!");
             ammo--;
             AudioGameModell.instance.PlayAudio("Match");
-            phaseTwoTriggered = false;
+            ResetPhase2();
+            
 
             if(_safe)
             {
@@ -176,6 +183,13 @@ public class LevelManager : MonoBehaviour
     {
         AudioGameModell.instance.PlayAudio("MonsterBreath");
         phaseTwoTriggered = true;
+        ActivateLight();
+    }
+
+    public void ResetPhase2()
+    {
+        phaseTwoTriggered = false;
+        DeactivateLight();
     }
 
     public void RestartGame()
@@ -183,5 +197,24 @@ public class LevelManager : MonoBehaviour
         Time.timeScale = 0f;
         gameOverScreen.SetActive(true);
         gameOver = true;
+    }
+
+    void ActivateLight()
+    {
+        lightContainer.SetActive(true);
+        lightContainer.transform.localScale = new Vector3(1, 1, 1);
+    }
+
+    void ShrinkLight()
+    {
+        if(lightContainer.transform.localScale.x > 0.3)
+        {
+            lightContainer.transform.localScale = new Vector3(lightContainer.transform.localScale.x - lightShrinkSpeed * Time.deltaTime, lightContainer.transform.localScale.y - lightShrinkSpeed * Time.deltaTime, lightContainer.transform.localScale.z);
+        }
+    }
+
+    public void DeactivateLight()
+    {
+        lightContainer.transform.localScale = new Vector3(1, 1, 1);
     }
 }

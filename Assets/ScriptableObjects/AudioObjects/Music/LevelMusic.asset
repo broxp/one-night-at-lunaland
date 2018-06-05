@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: LevelMusic
   m_EditorClassIdentifier: 
   volume: 0.827
-  importance: 2
+  importance: 1
   audioGroup: {fileID: 11400000, guid: 68cddc9db48a8024c80c7ed9369ddd7b, type: 2}
   audioClip: {fileID: 8300000, guid: 97d3991d1a0fe404698fc1479bba3c23, type: 3}
-  loop: 1
+  loop: 0
   audioSourcePlayingOn: {fileID: 0}

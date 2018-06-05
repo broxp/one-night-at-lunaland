@@ -70,6 +70,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventType: 0
   EventName: 
+  audioObject: {fileID: 0}
+  toggleObject: {fileID: 0}
+  volume: 1
 --- !u!212 &212298742620377868
 SpriteRenderer:
   m_ObjectHideFlags: 1

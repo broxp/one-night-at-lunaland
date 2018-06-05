@@ -371,7 +371,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcb8d796e3f4d1a40800e64c96799a72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Level3
+  zoomSpeed: 0.05
+  mainCam: {fileID: 575188991}
+  nextScene: Level4c
   clip: {fileID: 8300000, guid: dedc671943a8a03469b800d04aaeedaa, type: 3}
 --- !u!4 &1702322339 stripped
 Transform:

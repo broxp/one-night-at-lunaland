@@ -22,6 +22,16 @@ public class BoxScript : MonoBehaviour {
             case 0:
                 spriteRenderer.sprite = box2;
                 AudioModell.instance.PlayAudio("kick");
+
+                AudioSource[] _audioSources = AudioModell.instance.gameObject.GetComponents<AudioSource>();
+                foreach (AudioSource _source in _audioSources)
+                {
+                    if(_source.clip.name == "SpeakerSave3part1")
+                    {
+                        Destroy(_source);
+                    }
+                }
+
                 AudioModell.instance.PlayAudio("noboxkickingpls");
                 stage++;
                 break;
@@ -38,10 +48,17 @@ public class BoxScript : MonoBehaviour {
             case 3:
                 AudioModell.instance.PlayAudio("kick");
                 key.SetActive(true);
-                Destroy(this.gameObject);
+                Destroy(GetComponent<CircleCollider2D>());
+                StartCoroutine(StillThere());
 
                 stage++;
                 break;
         }
+    }
+
+    IEnumerator StillThere()
+    {
+        yield return new WaitForSeconds(8);
+        AudioModell.instance.PlayAudio("stillthere");
     }
 }

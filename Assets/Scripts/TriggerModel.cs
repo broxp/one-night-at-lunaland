@@ -10,6 +10,7 @@ public class TriggerModel : MonoBehaviour {
 
     public EventType eventType;
     public string EventName;
+    public AudioObject audioObject;
     public GameObject toggleObject;
     public float volume = 1;
 
