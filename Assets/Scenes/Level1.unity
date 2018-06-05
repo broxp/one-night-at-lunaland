@@ -1313,6 +1313,11 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114523498796663036, guid: 6a23c3dc615225547aa1d946a9bb31fe,
+        type: 2}
+      propertyPath: safety
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a23c3dc615225547aa1d946a9bb31fe, type: 2}
   m_IsPrefabParent: 0

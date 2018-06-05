@@ -51,6 +51,7 @@ public class LevelManager : MonoBehaviour
         AudioGameModell.instance.PlayAudio("LevelMusic", 0.3f);
         phaseTwoTriggered = false;
         gamePaused = false;
+        ammo = 1;
         if (GameManagerScript.instance != null)
         {
             ammo = GameManagerScript.instance.matches;
@@ -126,19 +127,18 @@ public class LevelManager : MonoBehaviour
             print("light!");
             ammo--;
             AudioGameModell.instance.PlayAudio("Match");
-            ResetPhase2();
-            
-
             if(_safe)
             {
                 if (safety <= phaseTwoRepelThreshold)
                 {
+                    ResetPhase2();
                     safety = maxSafety;
                     AudioGameModell.instance.PlayAudio("MonsterRepelled");
                     AudioGameModell.instance.StopAudio("MonsterBreath");
                 }
                 else if (phaseTwoRepelThreshold <= safety && safety <= phaseTwoThreshold)
                 {
+                    ResetPhase2();
                     safety = phaseTwoThreshold;
                     AudioGameModell.instance.PlayAudio("MonsterAnnoyed");
                     AudioGameModell.instance.StopAudio("MonsterBreath");
@@ -152,6 +152,10 @@ public class LevelManager : MonoBehaviour
             else
             {
                 //TEDDY WAR NICHT IN DER NÄHE
+                if (safety <= phaseTwoRepelThreshold)
+                {
+                    AudioGameModell.instance.PlayAudio("MonsterAnnoyed");
+                }
             }
         }
         else
