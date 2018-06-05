@@ -102,6 +102,7 @@ public class TeddyModell : MonoBehaviour {
         LevelManager.instance.gamePaused = false;
         LevelManager.instance.ActivateUpWays();
         CanvasView.instance.ClearBubbles();
+        StartCoroutine(CanvasView.instance.ShowUnhappyBubble());
         //AudioGameModell.instance.PlayAudio("suffering");
     }
 
@@ -112,6 +113,7 @@ public class TeddyModell : MonoBehaviour {
         LevelManager.instance.gamePaused = false;
         LevelManager.instance.DeactivateUpWays();
         CanvasView.instance.ClearBubbles();
+        StartCoroutine(CanvasView.instance.ShowHappyBubble());
     }
 
     //Item aufheben

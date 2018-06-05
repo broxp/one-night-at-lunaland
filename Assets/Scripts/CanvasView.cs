@@ -8,9 +8,10 @@ public class CanvasView : MonoBehaviour {
     public Text statusText;
     public double hp, ammoCarriedByTeddy, ammo, safety;
     public static CanvasView instance = null;
-    public GameObject PickUpItemBubble, LeaveItemBubble, UpBubble, DownBubble, matchUI;
+    public GameObject PickUpItemBubble, LeaveItemBubble, UpBubble, DownBubble, matchUI, happyBubblePrefab, unhappyBubblePrefab;
     public Sprite[] matchSprites;
 
+    GameObject moodBubble;
     Image matchImage;
     Transform tikUI1, tikUI2;
     Camera cam;
@@ -18,6 +19,11 @@ public class CanvasView : MonoBehaviour {
     private void Update()
     {
         UpdateStatusText();
+
+        if(moodBubble != null)
+        {
+            moodBubble.transform.position = cam.WorldToScreenPoint(tikUI2.position);
+        }
     }
 
     //Initialisieren als Singleton
@@ -67,12 +73,39 @@ public class CanvasView : MonoBehaviour {
     //UI für Item-Pickup
     public void ShowCrossingBubble()
     {
+        if (moodBubble != null)
+        {
+            Destroy(moodBubble);
+        }
+
         GameObject upBubble = GameObject.Instantiate(UpBubble, transform);
         GameObject downBubble = GameObject.Instantiate(DownBubble, transform);
 
 
         upBubble.transform.position = cam.WorldToScreenPoint(tikUI1.position);
         downBubble.transform.position = cam.WorldToScreenPoint(tikUI2.position);
+    }
+
+    public IEnumerator ShowHappyBubble()
+    {
+        if(moodBubble != null)
+        {
+            Destroy(moodBubble);
+        }
+        moodBubble = GameObject.Instantiate(happyBubblePrefab, cam.WorldToScreenPoint(tikUI2.position), Quaternion.identity, transform);
+        yield return new WaitForSeconds(4);
+        Destroy(moodBubble);
+    }
+
+    public IEnumerator ShowUnhappyBubble()
+    {
+        if (moodBubble != null)
+        {
+            Destroy(moodBubble);
+        }
+        moodBubble = GameObject.Instantiate(unhappyBubblePrefab, cam.WorldToScreenPoint(tikUI2.position), Quaternion.identity, transform);
+        yield return new WaitForSeconds(4);
+        Destroy(moodBubble);
     }
 
     //Löscht alle UI-Elemente mit dem "Bubble"-Tag (also alle Sprechblasen)

@@ -32,15 +32,18 @@ public class TeddyController : MonoBehaviour {
         {
             teddyModell.ActivateLight();
         }
-        if(CrossPlatformInputManager.GetAxis("Vertical") != 0)
+        if(LevelManager.instance.gamePaused == true)
         {
-            if(CrossPlatformInputManager.GetAxis("Vertical") < 0)
+            if (CrossPlatformInputManager.GetAxis("Vertical") != 0)
             {
-                teddyModell.GoDown();
-            }
-            if (CrossPlatformInputManager.GetAxis("Vertical") > 0)
-            {
-                teddyModell.GoUp();
+                if (CrossPlatformInputManager.GetAxis("Vertical") < 0)
+                {
+                    teddyModell.GoDown();
+                }
+                if (CrossPlatformInputManager.GetAxis("Vertical") > 0)
+                {
+                    teddyModell.GoUp();
+                }
             }
         }
     }

@@ -899,6 +899,10 @@ MonoBehaviour:
   UpBubble: {fileID: 1342081550268166, guid: f89a9e8458a806c468ef4473ae64d763, type: 2}
   DownBubble: {fileID: 1837136215103826, guid: 6ed3eda2d4fb7cd4a9c354c0d4d06cdb, type: 2}
   matchUI: {fileID: 1052539407811434}
+  happyBubblePrefab: {fileID: 1914505955944756, guid: de70304dced2edf40a14098e6d5c6cf5,
+    type: 2}
+  unhappyBubblePrefab: {fileID: 1337964946649386, guid: 6c45951022948874d8a1d88dc37b497f,
+    type: 2}
   matchSprites:
   - {fileID: 21300000, guid: 1e198d8685a85464ebfd46c6f46bc2e7, type: 3}
   - {fileID: 21300000, guid: fc95df53e3a82c94387fda1a204a4fd1, type: 3}

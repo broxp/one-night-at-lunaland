@@ -1303,12 +1303,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 33456270401134106, guid: 6a23c3dc615225547aa1d946a9bb31fe,
+    - target: {fileID: 33898958394091252, guid: 6a23c3dc615225547aa1d946a9bb31fe,
         type: 2}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 33898958394091252, guid: 6a23c3dc615225547aa1d946a9bb31fe,
+    - target: {fileID: 33456270401134106, guid: 6a23c3dc615225547aa1d946a9bb31fe,
         type: 2}
       propertyPath: m_Mesh
       value: 
