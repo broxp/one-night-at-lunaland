@@ -373,7 +373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoomSpeed: 0.05
   mainCam: {fileID: 575188991}
-  nextScene: Level4c
+  nextScene: Save4c
   clip: {fileID: 8300000, guid: dedc671943a8a03469b800d04aaeedaa, type: 3}
 --- !u!4 &1702322339 stripped
 Transform:
