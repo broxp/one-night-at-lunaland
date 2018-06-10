@@ -25,7 +25,7 @@ public class SpriteChunkDataEditor : Editor
             t => data.EditorOnlyChunkWidth = t);
 
         OnNotSame(data.EditorOnlyChunkHeight,
-            EditorGUILayout.DelayedIntField("Chunk Width", data.EditorOnlyChunkHeight),
+            EditorGUILayout.DelayedIntField("Chunk Height", data.EditorOnlyChunkHeight),
             t => data.EditorOnlyChunkHeight = t);
 
         EditorGUILayout.LabelField("Chunk Count Horizontaly: ", data.ChunkCountHorizontaly.ToString());

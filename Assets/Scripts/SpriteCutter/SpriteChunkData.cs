@@ -109,8 +109,8 @@ public class SpriteChunkData : ScriptableObject
                 
                 int chunkX = _chunkWidth * x, chunkY = _chunkHeight * y;
 
-                var chunkWidth = Math.Min(_textureToSplit.width - chunkX, _chunkWidth);
-                var chunkHeight = Math.Min(_textureToSplit.height - chunkY, _chunkHeight);
+                var chunkWidth = Math.Min(_textureToSplit.width - chunkX, _chunkWidth+2);
+                var chunkHeight = Math.Min(_textureToSplit.height - chunkY, _chunkHeight+2);
                 var texXY = new Texture2D(chunkWidth, chunkHeight, _textureToSplit.format, false);
                 texXY.name = name;
                 //Graphics.CopyTexture can not be used because we dont want a gpu side copy.

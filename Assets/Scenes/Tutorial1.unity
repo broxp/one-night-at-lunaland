@@ -207,6 +207,10 @@ Prefab:
       propertyPath: safety
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 4281117018962818, guid: 6a23c3dc615225547aa1d946a9bb31fe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a23c3dc615225547aa1d946a9bb31fe, type: 2}
   m_IsPrefabParent: 0
@@ -416,6 +420,11 @@ Prefab:
         type: 2}
       propertyPath: min.y
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114634656771298046, guid: b3f99b839f62f45fd9040b1a4c82d59b,
+        type: 2}
+      propertyPath: min.x
+      value: -13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3f99b839f62f45fd9040b1a4c82d59b, type: 2}
