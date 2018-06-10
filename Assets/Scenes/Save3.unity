@@ -1377,7 +1377,7 @@ MonoBehaviour:
   target: {fileID: 43420830}
   offset: {x: 0, y: 0, z: 0}
   min: {x: -0.5, y: -0.2, z: -10}
-  max: {x: 0.5, y: 0.2, z: -10}
+  max: {x: 0.5, y: 0.15, z: -10}
   smoothing: 5
 --- !u!1 &1764862573
 GameObject:
