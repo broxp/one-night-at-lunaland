@@ -536,7 +536,7 @@ Prefab:
     - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
       propertyPath: audioEvents.Array.size
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
@@ -633,43 +633,43 @@ Prefab:
     - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
       propertyPath: audioEvents.Array.data[2].name
-      value: shutup
+      value: part1
       objectReference: {fileID: 0}
     - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
       propertyPath: audioEvents.Array.data[2].audioSources.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: dac10b1a01abe7d4b8d3c4216c564e04, type: 3}
+      objectReference: {fileID: 8300000, guid: a6b0971625f07cc4f8db50277d2405d4, type: 3}
     - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
       propertyPath: audioEvents.Array.data[3].name
-      value: part1
+      value: noboxkickingpls
       objectReference: {fileID: 0}
     - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
       propertyPath: audioEvents.Array.data[3].audioSources.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 32a69487907cf594f8869ab80da22d76, type: 3}
+      objectReference: {fileID: 8300000, guid: 678f0dc5962c98f4b81a29345be28467, type: 3}
     - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
       propertyPath: audioEvents.Array.data[4].name
-      value: noboxkickingpls
+      value: stillthere
       objectReference: {fileID: 0}
     - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
       propertyPath: audioEvents.Array.data[4].audioSources.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 678f0dc5962c98f4b81a29345be28467, type: 3}
+      objectReference: {fileID: 8300000, guid: 6a02d3b8578c212428415ec260af645f, type: 3}
     - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
       propertyPath: audioEvents.Array.data[5].name
-      value: stillthere
+      value: kick
       objectReference: {fileID: 0}
     - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
       propertyPath: audioEvents.Array.data[5].audioSources.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 6a02d3b8578c212428415ec260af645f, type: 3}
+      objectReference: {fileID: 8300000, guid: 3e24612827226a94ba5e2a978c0a2a23, type: 3}
     - target: {fileID: 114309385389016294, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
       propertyPath: VoiceClipAtLevelStart
@@ -678,7 +678,7 @@ Prefab:
     - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
       propertyPath: audioEvents.Array.data[6].name
-      value: kick
+      value: keydoor
       objectReference: {fileID: 0}
     - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
@@ -693,13 +693,13 @@ Prefab:
     - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
       propertyPath: audioEvents.Array.data[7].name
-      value: keydoor
+      value: music
       objectReference: {fileID: 0}
     - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
       propertyPath: audioEvents.Array.data[7].audioSources.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 3e24612827226a94ba5e2a978c0a2a23, type: 3}
+      objectReference: {fileID: 8300000, guid: 97d3991d1a0fe404698fc1479bba3c23, type: 3}
     - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
       propertyPath: audioEvents.Array.data[8].name

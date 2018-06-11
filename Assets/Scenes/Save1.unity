@@ -336,7 +336,7 @@ Prefab:
         type: 2}
       propertyPath: audioEvents.Array.data[0].audioSources.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 01b5ccc0df79710418e08e1d39a6b066, type: 3}
+      objectReference: {fileID: 8300000, guid: ff145931c10aae848b46f4e7da409ad9, type: 3}
     - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
       propertyPath: audioEvents.Array.data[1].name

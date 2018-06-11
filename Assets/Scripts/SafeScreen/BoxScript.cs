@@ -26,7 +26,7 @@ public class BoxScript : MonoBehaviour {
                 AudioSource[] _audioSources = AudioModell.instance.gameObject.GetComponents<AudioSource>();
                 foreach (AudioSource _source in _audioSources)
                 {
-                    if(_source.clip.name == "SpeakerSave3part1")
+                    if(_source.clip.name == "SpeakerSave3part1" || _source.clip.name == "SpeakerSave3shutUpPlease")
                     {
                         Destroy(_source);
                     }
