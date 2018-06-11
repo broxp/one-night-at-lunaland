@@ -483,7 +483,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 08ca049a4d7cede4b974086c2468eb08, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 34c411574a8e377409d1a99b5f75c256, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -589,7 +589,7 @@ MonoBehaviour:
   eyes: {fileID: 844270100}
   lightaura: {fileID: 1193406183}
   sounds:
-  - {fileID: 8300000, guid: 08ca049a4d7cede4b974086c2468eb08, type: 3}
+  - {fileID: 8300000, guid: 34c411574a8e377409d1a99b5f75c256, type: 3}
   volume: 300
   nextScene: Save1
 --- !u!4 &867650079
@@ -1034,7 +1034,7 @@ MonoBehaviour:
   audioEvents:
   - name: Coin
     audioSources:
-    - {fileID: 8300000, guid: 3017cec11650fcb4bbe4a8914032ef09, type: 3}
+    - {fileID: 8300000, guid: 0444c43ce7a4e674d85d96ba0e960e60, type: 3}
 --- !u!4 &1779834467
 Transform:
   m_ObjectHideFlags: 0

@@ -97,9 +97,10 @@ public class StartScreen : MonoBehaviour
     }
 
     // A function to play sound N:
-    void PlaySound(int sound)
+    void PlaySound(int _sound, float _volume = 1)
     {
-        audiosource.clip = sounds[sound];
+        audiosource.clip = sounds[_sound];
+        audiosource.volume = _volume;
         audiosource.Play();
     }
 }
