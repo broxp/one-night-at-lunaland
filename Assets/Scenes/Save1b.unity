@@ -1374,7 +1374,7 @@ Prefab:
     - target: {fileID: 114309385389016294, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
       propertyPath: VoiceClipAtLevelStart
-      value: 
+      value: Clip
       objectReference: {fileID: 0}
     - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
@@ -1385,7 +1385,7 @@ Prefab:
         type: 2}
       propertyPath: audioEvents.Array.data[0].audioSources.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 01b5ccc0df79710418e08e1d39a6b066, type: 3}
+      objectReference: {fileID: 8300000, guid: a2684bf8d0c65524bb00a53371bbfd39, type: 3}
     - target: {fileID: 114062070462682968, guid: 012e531de36de5e4da92f49027eb50eb,
         type: 2}
       propertyPath: audioEvents.Array.data[1].name
