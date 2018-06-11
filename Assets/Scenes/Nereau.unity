@@ -1034,7 +1034,7 @@ MonoBehaviour:
   audioEvents:
   - name: Coin
     audioSources:
-    - {fileID: 8300000, guid: 0444c43ce7a4e674d85d96ba0e960e60, type: 3}
+    - {fileID: 8300000, guid: 3017cec11650fcb4bbe4a8914032ef09, type: 3}
 --- !u!4 &1779834467
 Transform:
   m_ObjectHideFlags: 0
