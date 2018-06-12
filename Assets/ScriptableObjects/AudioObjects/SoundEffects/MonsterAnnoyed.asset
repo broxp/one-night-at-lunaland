@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: MonsterAnnoyed
   m_EditorClassIdentifier: 
   volume: 1
-  importance: 0
+  importance: 2
   audioGroup: {fileID: 11400000, guid: 67908395198a2eb4d93d6dde6137e7be, type: 2}
   audioClip: {fileID: 8300000, guid: a6f5e5881a1f3da4e95c38c66360579d, type: 3}
   loop: 0

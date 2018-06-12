@@ -10,6 +10,7 @@ public class TeddyModell : MonoBehaviour {
     public bool safe = true;
 
     bool sufferingAudioPlaying = false;
+    bool annoyedAudioPlaying = false;
 
     Rigidbody2D rigidbody;
 
@@ -17,6 +18,7 @@ public class TeddyModell : MonoBehaviour {
     {
         safe = false;
         rigidbody = GetComponent<Rigidbody2D>();
+        annoyedAudioPlaying = false;
     }
 
     private void Update()
@@ -27,6 +29,11 @@ public class TeddyModell : MonoBehaviour {
         {
             if(safe || hp <= 0)
             {
+                if(!annoyedAudioPlaying)
+                {
+                    AudioGameModell.instance.PlayAudio("MonsterAnnoyed");
+                    annoyedAudioPlaying = true;
+                }
                 LevelManager.instance.RestartGame();
             }
             else
