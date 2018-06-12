@@ -211,7 +211,7 @@ public class LevelManager : MonoBehaviour
 
     void ShrinkLight()
     {
-        if(lightContainer.transform.localScale.x > 0.3)
+        if(lightContainer.transform.localScale.x > 0)
         {
             lightContainer.transform.localScale = new Vector3(lightContainer.transform.localScale.x - lightShrinkSpeed * Time.deltaTime, lightContainer.transform.localScale.y - lightShrinkSpeed * Time.deltaTime, lightContainer.transform.localScale.z);
         }
